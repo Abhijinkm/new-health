@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ആരോഗ്യം - ലളിതമായ ആരോഗ്യ ഡയറ്റ് & കെയർ പ്ലാറ്റ്‌ഫോം</title>
+  
+  <!-- Google Fonts for Malayalam Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@400;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container top-bar-content">
+      <span>🌿 നിങ്ങളുടെ ആരോഗ്യത്തിന് അനുയോജ്യമായ ലളിതമായ മലയാളം ഡയറ്റ് & വ്യായാമ സഹായി</span>
+      <div class="top-bar-right">
+        <span class="helpline-badge">📞 ഹെൽപ്‌ലൈൻ: +91 98765 43210</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="brand-logo" onclick="app.navigateTo('hero-section')">
+        <div class="logo-icon">🌿</div>
+        <div class="logo-text">
+          <span class="logo-title">ആരോഗ്യം</span>
+          <span class="logo-subtitle">Aarogyam Health</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#assessment-section" class="nav-link active">വിവരങ്ങൾ നൽകുക</a>
+        <a href="#dashboard-section" class="nav-link" id="navDashboardLink">ഡാഷ്‌ബോർഡ്</a>
+        <a href="#diet-section" class="nav-link" id="navDietLink">ഭക്ഷണക്രമം</a>
+        <a href="#solutionsSection" class="nav-link">പരിഹാരങ്ങൾ</a>
+        <a href="#water-section" class="nav-link">വാട്ടർ ട്രാക്കർ</a>
+        <a href="#exercise-section" class="nav-link">വ്യായാമങ്ങൾ</a>
+        <a href="#subscription-section" class="nav-link">വരിസംഖ്യ</a>
+        <a href="#doctor-section" class="nav-link highlight-nav">ഡോക്ടറെ കാണുക</a>
+      </nav>
+
+      <div class="header-actions">
+        <span class="subscription-pill" id="headerSubStatus">
+          <span class="status-dot"></span> <span id="headerSubText">സൗജന്യ പ്ലാൻ</span>
+        </span>
+        <button class="btn btn-outline-sm" id="resetDataBtn" title="വിവരങ്ങൾ പുനഃക്രമീകരിക്കുക">
+          🔄 പുതിയ പരിശോധന
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-section" id="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <div class="hero-badge">✨ ലളിതമായ ആരോഗ്യ നിർദ്ദേശങ്ങൾ മലയാളത്തിൽ</div>
+        <h1 class="hero-heading">
+          നിങ്ങളുടെ പ്രായത്തിനും അസുഖങ്ങൾക്കും അനുയോജ്യമായ 
+          <span class="text-primary">ഭക്ഷണക്രമം</span> കണ്ടെത്താം!
+        </h1>
+        <p class="hero-desc">
+          പ്രമേഹം, യൂറിക് ആസിഡ്, ഇടുപ്പ് / സന്ധി വേദന എന്നിവയുള്ളവർക്കായി മലയാളത്തിൽ തയാറാക്കിയ സുരക്ഷിതമായ ഭക്ഷണങ്ങൾ, ഒഴിവാക്കേണ്ടവ, വാട്ടർ റിമൈൻഡർ, ലളിതമായ വ്യായാമങ്ങൾ എന്നിവ ഇവിടെ ലഭ്യമാണ്.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#assessment-section" class="btn btn-primary btn-lg">
+            ✍️ ഇപ്പോൾ തന്നെ വിവരങ്ങൾ നൽകുക
+          </a>
+          <a href="#subscription-section" class="btn btn-secondary btn-lg">
+            ⭐ പ്രീമിയം പ്ലാൻ ₹199/മാസം
+          </a>
+        </div>
+        <div class="hero-trust-items">
+          <div class="trust-item">✅ 100% ലളിതമായ മലയാളം</div>
+          <div class="trust-item">💧 സ്മാർട്ട് വാട്ടർ അലാറം</div>
+          <div class="trust-item">👨‍⚕️ ഡോക്ടർ സപ്പോർട്ട്</div>
+        </div>
+      </div>
+      <div class="hero-card-preview">
+        <div class="floating-preview-card">
+          <div class="preview-header">
+            <span class="preview-tag">ഇന്നത്തെ ആരോഗ്യം</span>
+            <span class="preview-date" id="currentDateDisplay">ഇന്ന്</span>
+          </div>
+          <div class="preview-stats">
+            <div class="stat-box">
+              <span class="stat-number" id="previewWaterStat">0 / 8</span>
+              <span class="stat-label">ഗ്ലാസ്സ് വെള്ളം</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">20 മിനിറ്റ്</span>
+              <span class="stat-label">നടത്തം</span>
+            </div>
+          </div>
+          <div class="quick-health-tip">
+            <span class="tip-icon">💡</span>
+            <span class="tip-text">"യൂറിക് ആസിഡുള്ളവർ ചുവന്ന മാംസവും മത്തിയും ഒഴിവാക്കി ധാരാളം നാരങ്ങാവെള്ളം കുടിക്കുക."</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 1: Health Input Assessment Form -->
+  <section class="section assessment-section" id="assessment-section">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="section-badge">ഘട്ടം 1</span>
+        <h2 class="section-title">നിങ്ങളുടെ ആരോഗ്യ വിവരങ്ങൾ രേഖപ്പെടുത്തുക</h2>
+        <p class="section-subtitle">പ്രായവും ശരീരഭാരവും നിലവിലെ ആരോഗ്യ പ്രശ്നങ്ങളും തിരഞ്ഞെടുക്കുക. അതിനനുസരിച്ച് കൃത്യമായ നിർദ്ദേശങ്ങൾ താഴെ നൽകും.</p>
+      </div>
+
+      <div class="form-card">
+        <form id="healthAssessmentForm" onsubmit="event.preventDefault(); app.processAssessment();">
+          
+          <div class="form-grid">
+            <!-- Age Field -->
+            <div class="form-group">
+              <label for="userAge" class="form-label">
+                <span class="label-icon">🎂</span> പ്രായം (Age) <span class="required">*</span>
+              </label>
+              <div class="input-with-stepper">
+                <input type="number" id="userAge" min="10" max="100" value="45" required placeholder="ഉദാ: 45">
+                <span class="input-unit">വയസ്സ്</span>
+              </div>
+              <small class="field-help">10 മുതൽ 100 വയസ്സ് വരെ നൽകാം</small>
+            </div>
+
+            <!-- Weight Field -->
+            <div class="form-group">
+              <label for="userWeight" class="form-label">
+                <span class="label-icon">⚖️</span> ശരീരഭാരം (Weight) <span class="required">*</span>
+              </label>
+              <div class="input-with-stepper">
+                <input type="number" id="userWeight" min="25" max="180" step="0.5" value="68" required placeholder="ഉദാ: 68">
+                <span class="input-unit">kg (കിലോ)</span>
+              </div>
+              <small class="field-help">നിലവിലെ ശരീരഭാരം കിലോഗ്രാമിൽ</small>
+            </div>
+
+            <!-- Height Field -->
+            <div class="form-group">
+              <label for="userHeight" class="form-label">
+                <span class="label-icon">📏</span> ഉയരം (Height - BMI കണക്കാക്കാൻ)
+              </label>
+              <div class="input-with-stepper">
+                <input type="number" id="userHeight" min="90" max="220" value="165" placeholder="ഉദാ: 165">
+                <span class="input-unit">cm (സെ.മീ)</span>
+              </div>
+              <small class="field-help">ഉയരം സെന്റീമീറ്ററിൽ</small>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+              <label class="form-label">
+                <span class="label-icon">👤</span> ലിംഗം (Gender)
+              </label>
+              <div class="gender-pill-group">
+                <label class="gender-pill">
+                  <input type="radio" name="gender" value="male" checked>
+                  <span>പുരുഷൻ</span>
+                </label>
+                <label class="gender-pill">
+                  <input type="radio" name="gender" value="female">
+                  <span>സ്ത്രീ</span>
+                </label>
+                <label class="gender-pill">
+                  <input type="radio" name="gender" value="other">
+                  <span>മറ്റുള്ളവ</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Health Conditions Section (Comprehensive A to Z Catalog) -->
+          <div class="conditions-section">
+            <div class="d-flex justify-between align-center flex-wrap gap-1 mb-2">
+              <div>
+                <label class="form-label mb-0">
+                  <span class="label-icon">🩺</span> നിങ്ങൾക്ക് നിലവിലുള്ള ആരോഗ്യ പ്രശ്നങ്ങൾ തിരഞ്ഞെടുക്കുക:
+                </label>
+                <small class="text-muted">എല്ല് പൊട്ടൽ മുതൽ പനി വരെ (A to Z) - ഒന്നിൽ കൂടുതൽ തിരഞ്ഞെടുക്കാം</small>
+              </div>
+              <div class="d-flex align-center gap-1">
+                <span id="selectedCondCounter" class="selected-cond-counter">3 അസുഖങ്ങൾ തിരഞ്ഞെടുത്തിട്ടുണ്ട്</span>
+                <div class="condition-search-box">
+                  <input type="text" id="conditionSearchInput" class="form-control-sm" placeholder="🔍 അസുഖം തിരയുക (Search A to Z)..." oninput="app.filterConditions(this.value)">
+                </div>
+              </div>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="condition-filter-tabs">
+              <button type="button" class="cond-tab-btn active" onclick="app.filterCategory('all', this)">എല്ലാം (All)</button>
+              <button type="button" class="cond-tab-btn" onclick="app.filterCategory('acute', this)">പനി & അക്യൂട്ട് (Fever / Acute)</button>
+              <button type="button" class="cond-tab-btn" onclick="app.filterCategory('bone_joint', this)">എല്ല് & സന്ധികൾ (Bones & Joints)</button>
+              <button type="button" class="cond-tab-btn" onclick="app.filterCategory('lifestyle', this)">ജീവിതശൈലി & ആന്തരികം (Lifestyle & Organs)</button>
+              <button type="button" class="cond-tab-btn" onclick="app.filterCategory('digestive', this)">ദഹനം & ശ്വാസം (Digestion & Respiratory)</button>
+              <button type="button" class="cond-tab-btn" onclick="app.filterCategory('wellness', this)">മറ്റ് രോഗങ്ങൾ (Other Care)</button>
+            </div>
+
+            <div class="condition-chips-grid" id="conditionChipsGrid">
+
+              <!-- 1. Acidity -->
+              <label class="condition-card" data-category="digestive" data-keywords="acidity gastric gerd heartburn അസിഡിറ്റി ഗ്യാസ് നെഞ്ചെരിച്ചിൽ പുളിച്ചുതികട്ടൽ">
+                <input type="checkbox" name="conditions" value="acidity" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🫧</span>
+                  <div class="cond-details">
+                    <span class="cond-name">അസിഡിറ്റി & ഗ്യാസ്ട്രബിൾ (Acidity / GERD)</span>
+                    <span class="cond-desc">നെഞ്ചെരിച്ചിൽ, പുളിച്ചുതികട്ടൽ, വയറ്റിലെ ഗ്യാസ്</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 2. Allergy -->
+              <label class="condition-card" data-category="digestive" data-keywords="allergy sneezing rhinitis അലർജി തുമ്മൽ മൂക്കൊലിപ്പ്">
+                <input type="checkbox" name="conditions" value="allergy" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🌿</span>
+                  <div class="cond-details">
+                    <span class="cond-name">അലർജി & തുമ്മൽ (Allergy & Rhinitis)</span>
+                    <span class="cond-desc">പൊടി അലർജി, രാവിലെ തുമ്മൽ, കണ്ണ് ചൊറിച്ചിൽ</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 3. Anemia -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="anemia blood iron hemoglobin വിളർച്ച രക്തക്കുറവ് ക്ഷീണം">
+                <input type="checkbox" name="conditions" value="anemia" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🩸</span>
+                  <div class="cond-details">
+                    <span class="cond-name">വിളർച്ച & രക്തക്കുറവ് (Anemia / Low Hb)</span>
+                    <span class="cond-desc">ഹീമോഗ്ലോബിൻ ഉയർത്താൻ അയൺ സമ്പുഷ്ട പരിചരണം</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 4. Arthritis -->
+              <label class="condition-card" data-category="bone_joint" data-keywords="arthritis rheumatoid വാതം സന്ധിവാതം നീര്">
+                <input type="checkbox" name="conditions" value="arthritis" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🤝</span>
+                  <div class="cond-details">
+                    <span class="cond-name">സന്ധിവാതം (Arthritis / Rheumatoid)</span>
+                    <span class="cond-desc">സന്ധികളിൽ രാവിലെ മുറുക്കവും കഠിന നീർക്കെട്ടും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 5. Asthma -->
+              <label class="condition-card" data-category="digestive" data-keywords="asthma wheezing bronchitis ആസ്ത്മ ശ്വാസംമുട്ടൽ വലിവ്">
+                <input type="checkbox" name="conditions" value="asthma" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🫁</span>
+                  <div class="cond-details">
+                    <span class="cond-name">ആസ്ത്മ & ശ്വാസംമുട്ടൽ (Asthma & Bronchitis)</span>
+                    <span class="cond-desc">ശ്വാസനാളത്തിലെ തടസ്സവും രാത്രി ചുമയും മാറ്റാൻ</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 6. Back Pain -->
+              <label class="condition-card" data-category="bone_joint" data-keywords="back pain disc spine sciatica നടുവേദന ഡിസ്ക് സയാറ്റിക്ക">
+                <input type="checkbox" name="conditions" value="back_pain" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🧘</span>
+                  <div class="cond-details">
+                    <span class="cond-name">നടുവേദന & ഡിസ്ക് (Back Pain & Disc)</span>
+                    <span class="cond-desc">നട്ടെല്ലിന്റെ തേയ്മാനവും സയാറ്റിക്കയും കുറയ്ക്കാൻ</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 7. Bone Fracture -->
+              <label class="condition-card" data-category="acute" data-keywords="bone fracture broken എല്ല് ഒടിവ് പൊട്ടൽ പ്ലാസ്റ്റർ">
+                <input type="checkbox" name="conditions" value="bone_fracture" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🦴</span>
+                  <div class="cond-details">
+                    <span class="cond-name">എല്ല് പൊട്ടൽ / ഒടിവ് (Bone Fracture)</span>
+                    <span class="cond-desc">എല്ല് പെട്ടെന്ന് കൂടാനും കാത്സ്യം വർദ്ധിപ്പിക്കാനും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 8. High BP -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="bp blood pressure hypertension പ്രഷർ രക്തസമ്മർദ്ദം">
+                <input type="checkbox" name="conditions" value="bp" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">💓</span>
+                  <div class="cond-details">
+                    <span class="cond-name">ഉയർന്ന രക്തസമ്മർദ്ദം (High BP / പ്രഷർ)</span>
+                    <span class="cond-desc">ഉപ്പും എണ്ണയും നിയന്ത്രിക്കേണ്ടതുണ്ട്</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 9. Cervical Spondylosis -->
+              <label class="condition-card" data-category="bone_joint" data-keywords="cervical spondylosis neck pain കഴുത്തുവേദന തലചുറ്റൽ">
+                <input type="checkbox" name="conditions" value="cervical" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🦒</span>
+                  <div class="cond-details">
+                    <span class="cond-name">കഴുത്തുവേദന & സ്പോണ്ടിലോസിസ് (Neck Pain)</span>
+                    <span class="cond-desc">കഴുത്തിലെ കശേരുക്കളുടെ തേയ്മാനവും തലകറക്കവും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 10. Cholesterol -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="cholesterol triglycerides കൊളസ്ട്രോൾ കൊഴുപ്പ്">
+                <input type="checkbox" name="conditions" value="cholesterol" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🫀</span>
+                  <div class="cond-details">
+                    <span class="cond-name">കൊളസ്ട്രോൾ (High Cholesterol)</span>
+                    <span class="cond-desc">രക്തക്കുഴലുകളിൽ കൊഴുപ്പ് അടിയുന്നത് തടയണം</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 11. Constipation & Piles -->
+              <label class="condition-card" data-category="digestive" data-keywords="constipation piles hemorrhoids fissures മലബന്ധം പൈൽസ്">
+                <input type="checkbox" name="conditions" value="constipation_piles" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🌾</span>
+                  <div class="cond-details">
+                    <span class="cond-name">മലബന്ധം & പൈൽസ് (Constipation & Piles)</span>
+                    <span class="cond-desc">സുഗമമായ ശോധനയ്ക്കും വേദന കുറയ്ക്കാനും നാരുകൾ</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 12. Cough & Cold -->
+              <label class="condition-card" data-category="acute" data-keywords="cough cold throat phlegm ജലദോഷം ചുമ തൊണ്ടവേദന കഫക്കെട്ട്">
+                <input type="checkbox" name="conditions" value="cough_cold" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🤧</span>
+                  <div class="cond-details">
+                    <span class="cond-name">ജലദോഷം & വിട്ടുമാറാത്ത ചുമ (Cold & Cough)</span>
+                    <span class="cond-desc">കഫക്കെട്ട് അലിയിക്കാനും തൊണ്ടവേദന മാറ്റാനും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 13. Dengue Care -->
+              <label class="condition-card" data-category="acute" data-keywords="dengue platelet mosquito viral fever ഡെങ്കിപ്പനി പ്ലേറ്റ്‌ലെറ്റ്">
+                <input type="checkbox" name="conditions" value="dengue" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🦟</span>
+                  <div class="cond-details">
+                    <span class="cond-name">ഡെങ്കിപ്പനി & പ്ലേറ്റ്‌ലെറ്റ് കുറവ് (Dengue Care)</span>
+                    <span class="cond-desc">പ്ലേറ്റ്‌ലെറ്റ് എണ്ണം കൂട്ടാനും നിർജ്ജലീകരണം തടയാനും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 14. Diabetes -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="diabetes sugar glucose insulin പ്രമേഹം ഷുഗർ">
+                <input type="checkbox" name="conditions" value="diabetes" class="condition-checkbox" checked>
+                <div class="condition-card-content">
+                  <span class="cond-icon">🩸</span>
+                  <div class="cond-details">
+                    <span class="cond-name">പ്രമേഹം (Diabetes / Sugar)</span>
+                    <span class="cond-desc">രക്തത്തിലെ ഗ്ലൂക്കോസ് അളവ് നിയന്ത്രിക്കേണ്ടതുണ്ട്</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 15. Fatty Liver -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="fatty liver liver enzymes കരൾ ഫാറ്റി ലിവർ">
+                <input type="checkbox" name="conditions" value="fatty_liver" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🩺</span>
+                  <div class="cond-details">
+                    <span class="cond-name">ഫാറ്റി ലിവർ (Fatty Liver Disease)</span>
+                    <span class="cond-desc">കരളിൽ അടിഞ്ഞുകൂടിയ അനാവശ്യ കൊഴുപ്പ് കുറയ്ക്കണം</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 16. Fever & Viral Infection -->
+              <label class="condition-card" data-category="acute" data-keywords="fever viral temperature infection പനി വൈറൽ താപനില">
+                <input type="checkbox" name="conditions" value="fever" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🌡️</span>
+                  <div class="cond-details">
+                    <span class="cond-name">പനി & വൈറൽ അണുബാധ (Fever & Infection)</span>
+                    <span class="cond-desc">താപനില കുറയ്ക്കാനും ക്ഷീണം മാറാനും ദ്രാവകാഹാരം</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 17. Hip & Joint Pain -->
+              <label class="condition-card" data-category="bone_joint" data-keywords="hip joint pain arthritis pelvis ഇടുപ്പ് സന്ധിവേദന തേയ്മാനം">
+                <input type="checkbox" name="conditions" value="hip_pain" class="condition-checkbox" checked>
+                <div class="condition-card-content">
+                  <span class="cond-icon">🦵</span>
+                  <div class="cond-details">
+                    <span class="cond-name">ഇടുപ്പ് / സന്ധി വേദന (Hip & Joint Pain)</span>
+                    <span class="cond-desc">ഇടുപ്പെല്ല്, കാൽമുട്ട്, സന്ധിവേദന, തേയ്മാനം</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 18. Insomnia -->
+              <label class="condition-card" data-category="wellness" data-keywords="insomnia sleep stress anxiety ഉറക്കമില്ലായ്മ ഉറക്കം">
+                <input type="checkbox" name="conditions" value="insomnia" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🌙</span>
+                  <div class="cond-details">
+                    <span class="cond-name">ഉറക്കമില്ലായ്മ (Insomnia & Sleep Issues)</span>
+                    <span class="cond-desc">മനസ്സ് ശാന്തമാക്കി സ്വാഭാവിക ഉറക്കം ലഭിക്കാൻ</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 19. Kidney Stone -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="kidney stone renal calculus മൂത്രത്തിൽ കല്ല് കിഡ്നി">
+                <input type="checkbox" name="conditions" value="kidney_stone" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🪨</span>
+                  <div class="cond-details">
+                    <span class="cond-name">കിഡ്നി സ്റ്റോൺ (Kidney Stones)</span>
+                    <span class="cond-desc">മൂത്രത്തിൽ കല്ല് വരാതിരിക്കാനും കിഡ്നി ആരോഗ്യം സംരക്ഷിക്കാനും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 20. Knee Osteoarthritis -->
+              <label class="condition-card" data-category="bone_joint" data-keywords="knee pain osteoarthritis cartilage മുട്ടുവേദന കാൽമുട്ട് തേയ്മാനം">
+                <input type="checkbox" name="conditions" value="knee_pain" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🦵</span>
+                  <div class="cond-details">
+                    <span class="cond-name">കാൽമുട്ട് തേയ്മാനം (Knee Osteoarthritis)</span>
+                    <span class="cond-desc">നടക്കുമ്പോഴുള്ള കാൽമുട്ട് വേദനയും കൊഴുപ്പ് തേയ്മാനവും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 21. Migraine & Headache -->
+              <label class="condition-card" data-category="wellness" data-keywords="migraine headache throbbing തലവേദന മൈഗ്രെയ്ൻ">
+                <input type="checkbox" name="conditions" value="migraine" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">⚡</span>
+                  <div class="cond-details">
+                    <span class="cond-name">മൈഗ്രെയ്ൻ & തലവേദന (Migraine & Headache)</span>
+                    <span class="cond-desc">നാഡികളെ ശാന്തമാക്കാനും തലയ്ക്കുള്ളിലെ ഇടിപ്പ് കുറയ്ക്കാനും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 22. Obesity -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="obesity overweight belly fat ഭാരം അമിതവണ്ണം പൊണ്ണത്തടി">
+                <input type="checkbox" name="conditions" value="obesity" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">⚖️</span>
+                  <div class="cond-details">
+                    <span class="cond-name">അമിതവണ്ണം & പൊണ്ണത്തടി (Obesity Care)</span>
+                    <span class="cond-desc">ആരോഗ്യകരമായി ശരീരഭാരവും വയറിലെ കൊഴുപ്പും കുറയ്ക്കാൻ</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 23. PCOD / PCOS -->
+              <label class="condition-card" data-category="wellness" data-keywords="pcod pcos period hormonal ആർത്തവം പി.സി.ഒ.ഡി ഹോർമോൺ">
+                <input type="checkbox" name="conditions" value="pcod" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🌸</span>
+                  <div class="cond-details">
+                    <span class="cond-name">പി.സി.ഒ.ഡി / പി.സി.ഒ.എസ് (PCOD / PCOS)</span>
+                    <span class="cond-desc">ഹോർമോൺ വ്യതിയാനങ്ങളും ക്രമം തെറ്റിയ ആർത്തവവും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 24. Sinusitis -->
+              <label class="condition-card" data-category="acute" data-keywords="sinus sinusitis head heaviness സൈനസ് തലനീരിറക്കം കണ്ണ് നീറ്റൽ">
+                <input type="checkbox" name="conditions" value="sinus" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">👃</span>
+                  <div class="cond-details">
+                    <span class="cond-name">സൈനസൈറ്റിസ് & തലനീരിറക്കം (Sinusitis)</span>
+                    <span class="cond-desc">കണ്ണുകൾക്കും നെറ്റിക്കും ചുറ്റുമുള്ള ഭാരവും വേദനയും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 25. Thyroid -->
+              <label class="condition-card" data-category="lifestyle" data-keywords="thyroid tsh hypo hyper തൈറോയ്ഡ് ഹോർമോൺ">
+                <input type="checkbox" name="conditions" value="thyroid" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🦋</span>
+                  <div class="cond-details">
+                    <span class="cond-name">തൈറോയ്ഡ് (Thyroid Problems)</span>
+                    <span class="cond-desc">ഹൈപ്പോ / ഹൈപ്പർ തൈറോയ്ഡ് ഹോർമോൺ സന്തുലിതാവസ്ഥ</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 26. Uric Acid & Gout -->
+              <label class="condition-card" data-category="bone_joint" data-keywords="uric acid gout toe pain യൂറിക് ആസിഡ് വാതം പെരുവിരൽ">
+                <input type="checkbox" name="conditions" value="uric_acid" class="condition-checkbox" checked>
+                <div class="condition-card-content">
+                  <span class="cond-icon">🧪</span>
+                  <div class="cond-details">
+                    <span class="cond-name">യൂറിക് ആസിഡ് (Uric Acid / Gout)</span>
+                    <span class="cond-desc">കാലിലെ പെരുവിരലിലോ സന്ധികളിലോ വേദനയും നീർക്കെട്ടും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 27. UTI -->
+              <label class="condition-card" data-category="wellness" data-keywords="uti urinary burning infection മൂത്രമൊഴിക്കുമ്പോൾ പുകച്ചിൽ അണുബാധ">
+                <input type="checkbox" name="conditions" value="uti" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🚽</span>
+                  <div class="cond-details">
+                    <span class="cond-name">യൂറിനറി ഇൻഫെക്ഷൻ (UTI Care)</span>
+                    <span class="cond-desc">മൂത്രമൊഴിക്കുമ്പോഴുള്ള പുകച്ചിലും അടിവയറ്റിലെ വേദനയും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 28. Varicose Veins -->
+              <label class="condition-card" data-category="bone_joint" data-keywords="varicose veins leg swelling cramps ഞരമ്പ് വീക്കം കാൽ കടച്ചിൽ">
+                <input type="checkbox" name="conditions" value="varicose_veins" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🦵</span>
+                  <div class="cond-details">
+                    <span class="cond-name">വെരിക്കോസ് വെയിൻ (Varicose Veins)</span>
+                    <span class="cond-desc">കാലിലെ നീല ഞരമ്പ് വീക്കവും കഠിനമായ കടച്ചിലും</span>
+                  </div>
+                </div>
+              </label>
+
+              <!-- 29. None / General Fitness -->
+              <label class="condition-card" data-category="wellness" data-keywords="none general fitness സാധാരണ ആരോഗ്യം ഒന്നുമില്ല">
+                <input type="checkbox" name="conditions" value="none" id="noConditionCheckbox" class="condition-checkbox">
+                <div class="condition-card-content">
+                  <span class="cond-icon">🌿</span>
+                  <div class="cond-details">
+                    <span class="cond-name">പ്രത്യേക അസുഖങ്ങളില്ല (സാധാരണ ആരോഗ്യം)</span>
+                    <span class="cond-desc">ശരീരഭാരവും ആരോഗ്യവും കാത്തുസൂക്ഷിക്കാൻ</span>
+                  </div>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Activity level -->
+          <div class="form-group mt-3">
+            <label class="form-label">
+              <span class="label-icon">🚶</span> നിങ്ങളുടെ ദൈനംദിന ശാരീരിക അധ്വാനം (Activity Level):
+            </label>
+            <div class="activity-selector">
+              <label class="activity-opt">
+                <input type="radio" name="activity" value="low" checked>
+                <span class="activity-box">
+                  <strong>കുറഞ്ഞ അധ്വാനം</strong>
+                  <small>കൂടുതൽ സമയവും ഇരുന്നുള്ള ജോലി</small>
+                </span>
+              </label>
+              <label class="activity-opt">
+                <input type="radio" name="activity" value="moderate">
+                <span class="activity-box">
+                  <strong>ഇടത്തരം അധ്വാനം</strong>
+                  <small>ദിവസവും അൽപം നടത്തം അല്ലെങ്കിൽ വീട്ടുജോലി</small>
+                </span>
+              </label>
+              <label class="activity-opt">
+                <input type="radio" name="activity" value="high">
+                <span class="activity-box">
+                  <strong>കൂടിയ അധ്വാനം</strong>
+                  <small>കഠിനാധ്വാനം അല്ലെങ്കിൽ ചിട്ടയായ വ്യായാമം</small>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-actions text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-xl">
+              🔍 എന്റെ ആരോഗ്യ ഡയറ്റും വ്യായാമങ്ങളും കാണുക
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 2: Personalized Health Dashboard -->
+  <section class="section dashboard-section" id="dashboard-section">
+    <div class="container">
+      
+      <div class="section-title-wrap">
+        <div class="d-flex justify-between align-center flex-wrap gap-1">
+          <div>
+            <span class="section-badge">നിങ്ങളുടെ റിപ്പോർട്ട്</span>
+            <h2 class="section-title">ആരോഗ്യ ഡാഷ്‌ബോർഡ്</h2>
+          </div>
+          <button class="btn btn-secondary-sm" onclick="window.print()">
+            🖨️ ഡയറ്റ് ചാർട്ട് പ്രിന്റ് ചെയ്യുക / സേവ് ചെയ്യുക
+          </button>
+        </div>
+      </div>
+
+      <!-- Dashboard Overview Cards -->
+      <div class="dashboard-grid">
+        
+        <!-- Profile & BMI Card -->
+        <div class="dash-card profile-card">
+          <div class="dash-card-header">
+            <h3>👤 പ്രൊഫൈൽ ചുരുക്കം</h3>
+            <span class="badge-sub-pill" id="dashSubBadge">സൗജന്യ പ്ലാൻ</span>
+          </div>
+          <div class="dash-card-body">
+            <div class="user-meta-list">
+              <div class="meta-row">
+                <span class="meta-label">പ്രായം:</span>
+                <strong class="meta-val" id="dashAgeDisplay">45 വയസ്സ്</strong>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">ഭാരം:</span>
+                <strong class="meta-val" id="dashWeightDisplay">68 kg</strong>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">ഉയരം:</span>
+                <strong class="meta-val" id="dashHeightDisplay">165 cm</strong>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">BMI (ബോഡി മാസ് ഇൻഡക്സ്):</span>
+                <strong class="meta-val" id="dashBmiDisplay">25.0</strong>
+              </div>
+            </div>
+            
+            <div class="bmi-indicator-bar mt-2">
+              <div class="bmi-progress" id="bmiProgressBar" style="width: 50%;"></div>
+            </div>
+            <p class="bmi-status-text" id="dashBmiStatus">നിങ്ങളുടെ ഭാരം സാധാരണ പരിധിയിലാണ്.</p>
+
+            <div class="active-conditions-chips mt-3">
+              <span class="meta-label">തിരഞ്ഞെടുത്ത ആരോഗ്യ പ്രശ്നങ്ങൾ:</span>
+              <div class="chips-container mt-1" id="dashConditionsChips">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Today's Goals & Habits Card -->
+        <div class="dash-card goals-card">
+          <div class="dash-card-header">
+            <h3>🎯 ഇന്നത്തെ ദൈനംദിന ലക്ഷ്യങ്ങൾ</h3>
+            <span class="badge-date" id="dashTodayDate">ഇന്ന്</span>
+          </div>
+          <div class="dash-card-body">
+            <div class="daily-checklist">
+              
+              <label class="checklist-item">
+                <input type="checkbox" id="checkMorningDiet" onchange="app.toggleChecklist('diet')">
+                <div class="check-text">
+                  <strong>പ്രഭാതഭക്ഷണ നിയന്ത്രണം പാലിച്ചു</strong>
+                  <small>മധുരവും എണ്ണയും കുറച്ച ഭക്ഷണം കഴിച്ചു</small>
+                </div>
+              </label>
+
+              <label class="checklist-item">
+                <input type="checkbox" id="checkWaterGoal" onchange="app.toggleChecklist('water')">
+                <div class="check-text">
+                  <strong>ആവശ്യത്തിന് വെള്ളം കുടിച്ചു</strong>
+                  <small><span id="dashWaterGoalTarget">8 ഗ്ലാസ്സ്</span> പൂർത്തിയാക്കുക</small>
+                </div>
+              </label>
+
+              <label class="checklist-item">
+                <input type="checkbox" id="checkExerciseGoal" onchange="app.toggleChecklist('exercise')">
+                <div class="check-text">
+                  <strong>20 മിനിറ്റ് സുരക്ഷിതമായ വ്യായാമം ചെയ്തു</strong>
+                  <small>ലളിതമായ നടത്തം അല്ലെങ്കിൽ സ്ട്രെച്ചിംഗ്</small>
+                </div>
+              </label>
+
+              <label class="checklist-item">
+                <input type="checkbox" id="checkMedicineGoal" onchange="app.toggleChecklist('med')">
+                <div class="check-text">
+                  <strong>മരുന്നുകൾ കൃത്യസമയത്ത് കഴിച്ചു</strong>
+                  <small>ഡോക്ടർ നിർദ്ദേശിച്ച അളവിൽ</small>
+                </div>
+              </label>
+
+            </div>
+
+            <div class="checklist-score-bar mt-3">
+              <div class="score-label-row">
+                <span>ഇന്നത്തെ സ്കോർ</span>
+                <span id="checklistScorePercent">0%</span>
+              </div>
+              <div class="score-progress-track">
+                <div class="score-progress-fill" id="checklistScoreBar" style="width: 0%;"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Water Quick Status Card -->
+        <div class="dash-card water-summary-card">
+          <div class="dash-card-header">
+            <h3>💧 വെള്ളം കുടി സ്റ്റാറ്റസ്</h3>
+            <a href="#water-section" class="card-link">ട്രാക്കറിലേക്ക് &rarr;</a>
+          </div>
+          <div class="dash-card-body text-center">
+            <div class="dash-water-visual">
+              <div class="water-bubble-meter">
+                <span class="big-water-val" id="dashWaterCurrent">0</span>
+                <span class="total-water-val">/ <span id="dashWaterMax">8</span> ഗ്ലാസ്സ്</span>
+              </div>
+              <div class="water-liter-sub" id="dashWaterLiters">0.0 / 2.5 ലിറ്റർ</div>
+            </div>
+            <div class="water-quick-buttons mt-3">
+              <button class="btn btn-outline-sm" onclick="app.logWaterQuick(1)">+1 ഗ്ലാസ്സ് കുടിച്ചു 🥛</button>
+            </div>
+            <p class="quick-water-reminder-msg mt-2" id="dashWaterTip">
+              ദാഹം തോന്നും വരെ കാത്തിരിക്കാതെ കൃത്യമായി വെള്ളം കുടിക്കുക!
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 3: Malayalam Diet Suggestions (Safe Foods & Foods to Avoid) -->
+  <section class="section diet-section bg-light" id="diet-section">
+    <div class="container">
+      
+      <div class="section-title-wrap text-center">
+        <span class="section-badge">ഭക്ഷണ ഉപദേശം</span>
+        <h2 class="section-title">നിങ്ങൾക്കുള്ള മലയാളം ഡയറ്റ് നിർദ്ദേശങ്ങൾ</h2>
+        <p class="section-subtitle">
+          നിങ്ങൾ തിരഞ്ഞെടുത്ത ആരോഗ്യ പ്രശ്നങ്ങൾക്ക് അനുയോജ്യമായ സുരക്ഷിതമായ ഭക്ഷണങ്ങളും, കർശനമായി ഒഴിവാക്കേണ്ടവയും താഴെ നൽകിയിരിക്കുന്നു.
+        </p>
+      </div>
+
+      <!-- Condition Specific Alert / Advice Banner -->
+      <div class="condition-alert-banner" id="dietConditionBanner">
+        <!-- Injected via JS -->
+      </div>
+
+      <!-- Safe Foods vs Avoid Foods Columns -->
+      <div class="diet-comparison-grid">
+        
+        <!-- Safe Foods Column -->
+        <div class="diet-col safe-foods-col">
+          <div class="diet-col-header safe-header">
+            <div class="col-header-icon">✅</div>
+            <div>
+              <h3>കഴിക്കാൻ അനുയോജ്യമായവ (Safe Foods)</h3>
+              <p>ആരോഗ്യകരവും സുരക്ഷിതവുമായ ആഹാരങ്ങൾ</p>
+            </div>
+          </div>
+          
+          <div class="food-items-container" id="safeFoodsList">
+            <!-- Injected via JS based on selected conditions -->
+          </div>
+        </div>
+
+        <!-- Foods to Avoid Column -->
+        <div class="diet-col avoid-foods-col">
+          <div class="diet-col-header avoid-header">
+            <div class="col-header-icon">⚠️</div>
+            <div>
+              <h3>ഒഴിവാക്കേണ്ട ഭക്ഷണങ്ങൾ (Foods to Avoid)</h3>
+              <p>അസുഖം കൂട്ടാൻ സാധ്യതയുള്ള ദോഷകരമായവ</p>
+            </div>
+          </div>
+
+          <div class="food-items-container" id="avoidFoodsList">
+            <!-- Injected via JS based on selected conditions -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Daily Meal Routine Timeline (മാതൃകാ ഭക്ഷണക്രമം) -->
+      <div class="meal-plan-timeline-card mt-5">
+        <div class="timeline-header">
+          <h3>🕒 ഒരു ദിവസത്തെ മാതൃകാ ഭക്ഷണക്രമം (Daily Routine)</h3>
+          <p>കൃത്യസമയത്ത് ആഹാരം കഴിക്കുന്നത് ദഹനത്തിനും ഷുഗർ നിയന്ത്രണത്തിനും സഹായിക്കും</p>
+        </div>
+
+        <div class="timeline-grid" id="mealTimelineContainer">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- Solutions & Home Care Tips Section (പ്രത്യേക പരിഹാരങ്ങൾ) -->
+      <div class="solutions-section-card mt-5" id="solutionsSection">
+        <div class="timeline-header text-center">
+          <span class="section-badge">സമഗ്ര പരിഹാരങ്ങൾ</span>
+          <h3 class="mt-1">💡 ഓരോ അസുഖത്തിനുമുള്ള പ്രകൃതിദത്ത പരിഹാരങ്ങളും പരിചരണവും (Solutions & Care Tips)</h3>
+          <p>നിങ്ങൾ തിരഞ്ഞെടുത്ത ഓരോ ആരോഗ്യ പ്രശ്നത്തിനും വേഗത്തിൽ ആശ്വാസം ലഭിക്കാനുള്ള പ്രായോഗിക പരിഹാരങ്ങൾ</p>
+        </div>
+
+        <div class="solutions-cards-grid" id="solutionsCardsContainer">
+          <!-- Injected via JS based on selected conditions -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Step 4: Water Reminder & Interactive Tracker -->
+  <section class="section water-section" id="water-section">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="section-badge">ഹൈഡ്രേഷൻ സഹായി</span>
+        <h2 class="section-title">വെള്ളം കുടിക്കാനുള്ള ഓർമ്മപ്പെടുത്തലും ട്രാക്കറും</h2>
+        <p class="section-subtitle">ശരീരഭാരത്തിനനുസരിച്ച് ആവശ്യമായ വെള്ളം കൃത്യമായി കുടിക്കാനും ഓർമ്മപ്പെടുത്തലുകൾ നേടാനും ഈ ട്രാക്കർ ഉപയോഗിക്കുക.</p>
+      </div>
+
+      <div class="water-interactive-card">
+        <div class="water-card-grid">
+          
+          <!-- Water Left: Visual Tracker -->
+          <div class="water-left-column">
+            <div class="water-intake-header">
+              <span class="target-title">നിങ്ങളുടെ ദിവസേനയുള്ള ലക്ഷ്യം:</span>
+              <span class="target-amount" id="waterTargetGoalLiters">2.5 ലിറ്റർ (10 ഗ്ലാസ്സ്)</span>
+            </div>
+
+            <!-- Animated Water Bottle or Visual Container -->
+            <div class="water-bottle-container">
+              <div class="water-bottle-fill" id="waterBottleFill" style="height: 0%;">
+                <div class="water-wave"></div>
+                <div class="water-wave"></div>
+              </div>
+              <div class="water-bottle-label">
+                <span class="bottle-percent" id="waterBottlePercent">0%</span>
+                <span class="bottle-drank-count" id="waterGlassesCountDisplay">0 / 10 ഗ്ലാസ്സ്</span>
+              </div>
+            </div>
+
+            <div class="water-action-buttons">
+              <button class="btn btn-primary" onclick="app.addWaterGlass()">
+                🥛 +1 ഗ്ലാസ്സ് കുടിച്ചു (250 ml)
+              </button>
+              <button class="btn btn-outline" onclick="app.removeWaterGlass()">
+                -1 കുറയ്ക്കുക
+              </button>
+              <button class="btn btn-text" onclick="app.resetWater()">
+                പുനഃക്രമീകരിക്കുക
+              </button>
+            </div>
+          </div>
+
+          <!-- Water Right: Reminder Settings & Tips -->
+          <div class="water-right-column">
+            
+            <!-- Reminder Alert Box -->
+            <div class="reminder-settings-box">
+              <div class="reminder-box-header">
+                <h4>⏰ വെള്ളം കുടിക്കാനുള്ള ഓർമ്മപ്പെടുത്തൽ (Reminder Alarm)</h4>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="waterAlarmToggle" onchange="app.toggleWaterAlarm()">
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <p class="reminder-status-note" id="waterAlarmStatusText">
+                ഓർമ്മപ്പെടുത്തൽ നിലവിൽ ഓഫ് ആണ്. സൗണ്ട് അലാറം പ്രവർത്തനക്ഷമമാക്കാൻ ഓൺ ചെയ്യുക.
+              </p>
+
+              <div class="reminder-interval-select mt-2">
+                <label for="reminderInterval">എത്ര സമയം കൂടുമ്പോൾ ഓർമ്മിപ്പിക്കണം?</label>
+                <select id="reminderInterval" onchange="app.updateReminderInterval()">
+                  <option value="30">ഓരോ 30 മിനിറ്റിലും</option>
+                  <option value="45">ഓരോ 45 മിനിറ്റിലും</option>
+                  <option value="60" selected>ഓരോ 1 മണിക്കൂറിലും (60 മിനിറ്റ്)</option>
+                  <option value="90">ഓരോ 1.5 മണിക്കൂറിലും</option>
+                </select>
+              </div>
+
+              <div class="alarm-test-btn-wrap mt-2">
+                <button class="btn btn-secondary-sm" onclick="app.testChime()">
+                  🔔 അലാറം ശബ്ദം പരീക്ഷിക്കുക (Test Chime)
+                </button>
+              </div>
+            </div>
+
+            <!-- Malayalam Hydration Guidelines -->
+            <div class="hydration-guidelines mt-3">
+              <h4>💧 വെള്ളം കുടിക്കുമ്പോൾ ശ്രദ്ധിക്കേണ്ടവ:</h4>
+              <ul class="water-tips-list">
+                <li>രാവിലെ എഴുന്നേറ്റയുടൻ 1-2 ഗ്ലാസ്സ് ഇളംചൂടുവെള്ളം കുടിക്കുന്നത് കുടലിന്റെ ആരോഗ്യത്തിന് നല്ലതാണ്.</li>
+                <li>ആഹാരം കഴിക്കുന്നതിന് തൊട്ടുമുമ്പോ കഴിച്ചയുടനെയോ അമിതമായി വെള്ളം കുടിക്കരുത് (ദഹനരസങ്ങൾ നേർത്തുപോകും).</li>
+                <li>യൂറിക് ആസിഡുള്ളവർ ദിവസവും കുറഞ്ഞത് 3-3.5 ലിറ്റർ വെള്ളം നിർബന്ധമായും കുടിക്കണം. ഇത് മൂത്രത്തിലൂടെ യൂറിക് ആസിഡ് പുറന്തള്ളാൻ സഹായിക്കും.</li>
+                <li>ദാഹം തോന്നി കാത്തിരിക്കരുത്; അല്പാൽപ്പമായി കൃത്യമായ ഇടവേളകളിൽ കുടിക്കുക.</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 5: Safe Exercise Tips -->
+  <section class="section exercise-section bg-light" id="exercise-section">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="section-badge">ശാരീരിക ക്ഷമത</span>
+        <h2 class="section-title">സുരക്ഷിതമായ വ്യായാമ നിർദ്ദേശങ്ങൾ</h2>
+        <p class="section-subtitle">
+          ഇടുപ്പ് വേദനയോ സന്ധി വേദനയോ ഉള്ളവർക്ക് ദോഷം വരാത്തതും, പ്രമേഹവും യൂറിക് ആസിഡും നിയന്ത്രിക്കാൻ സഹായിക്കുന്നതുമായ ലളിതമായ വ്യായാമങ്ങൾ.
+        </p>
+      </div>
+
+      <!-- Safe Exercises Grid Injected via JS -->
+      <div class="exercise-cards-grid" id="exerciseCardsContainer">
+        <!-- Injected via JS based on user's conditions -->
+      </div>
+
+      <!-- Important Safety Warning for Hip & Joint Pain -->
+      <div class="exercise-warning-box mt-4">
+        <div class="warning-icon">⚠️</div>
+        <div class="warning-content">
+          <h4>ഇടുപ്പ് / സന്ധി വേദനയുള്ളവർക്കുള്ള കർശന മുന്നറിയിപ്പ്:</h4>
+          <p>
+            കഠിനമായ ഭാരോദ്വഹനം, ചാട്ടം, കഠിനമായ സ്ക്വാറ്റുകൾ (deep squats), കുത്തനെയുള്ള കയറ്റം എന്നിവ ഒഴിവാക്കുക. വേദന അനുഭവപ്പെടുകയാണെങ്കിൽ ഉടൻ വ്യായാമം നിർത്തി വിശ്രമിക്കുക. ഡോക്ടറോ ഫിസിയോതെറാപ്പിസ്റ്റോ നിർദ്ദേശിച്ച വ്യായാമങ്ങൾ മാത്രം ചെയ്യുക.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 6: Monthly Subscription Plans & Payment -->
+  <section class="section subscription-section" id="subscription-section">
+    <div class="container">
+      
+      <div class="section-title-wrap text-center">
+        <span class="section-badge">പ്രതിമാസ വരിസംഖ്യ</span>
+        <h2 class="section-title">ലളിതമായ പ്രതിമാസ സബ്സ്ക്രിപ്ഷൻ പ്ലാനുകൾ</h2>
+        <p class="section-subtitle">
+          നിങ്ങളുടെ ആരോഗ്യ കാര്യങ്ങളിൽ കൂടുതൽ വ്യക്തിഗത ശ്രദ്ധയും ഡോക്ടർ കൺസൾട്ടേഷനും വാട്സാപ്പ് പിന്തുണയും ലഭിക്കാൻ ഒരു പ്ലാൻ തിരഞ്ഞെടുക്കുക.
+        </p>
+      </div>
+
+      <div class="pricing-cards-grid">
+        
+        <!-- Plan 1: Free Basic Plan -->
+        <div class="pricing-card" id="planCardFree">
+          <div class="plan-header">
+            <span class="plan-type">സാധാരണ പ്ലാൻ</span>
+            <h3 class="plan-name">സൗജന്യ ഡയറ്റ് പ്ലാൻ</h3>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">0</span>
+              <span class="duration">/ എപ്പോഴും സൗജന്യം</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li>✅ പ്രാഥമിക ആരോഗ്യ വിവര വിശകലനം</li>
+              <li>✅ പൊതുവായ മലയാളം ഭക്ഷണ നിർദ്ദേശങ്ങൾ</li>
+              <li>✅ ദൈനംദിന വാട്ടർ ട്രാക്കറും അലാറവും</li>
+              <li>✅ അടിസ്ഥാന വ്യായാമ വിവരങ്ങൾ</li>
+              <li>❌ ഡോക്ടർ / കോച്ച് നേരിട്ടുള്ള ഫോൺ സപ്പോർട്ട്</li>
+              <li>❌ വ്യക്തിഗത ഡയറ്റ് മാറ്റങ്ങൾ</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <button class="btn btn-outline w-100" id="btnSelectFree" onclick="app.selectPlan('free')">
+              നിലവിലെ പ്ലാൻ
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 2: Monthly Care Plan (Recommended) -->
+        <div class="pricing-card featured-plan" id="planCardCare">
+          <div class="popular-ribbon">ഏറ്റവും കൂടുതൽ ആളുകൾ തിരഞ്ഞെടുക്കുന്നത് ⭐</div>
+          <div class="plan-header">
+            <span class="plan-type">പ്രതിമാസ കെയർ</span>
+            <h3 class="plan-name">ആരോഗ്യ സുരക്ഷ പ്ലാൻ</h3>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">199</span>
+              <span class="duration">/ മാസം</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li>✅ പൂർണ്ണമായ വ്യക്തിഗത മലയാളം ഡയറ്റ് ചാർട്ട്</li>
+              <li>✅ വാട്സാപ്പ് വഴി പ്രതിവാര ഡയറ്റ് വിലയിരുത്തൽ</li>
+              <li>✅ സ്മാർട്ട് വാട്ടർ & മരുന്ന് റിമൈൻഡർ അലേർട്ടുകൾ</li>
+              <li>✅ ഇടുപ്പ് / സന്ധി വേദനയ്ക്ക് പ്രത്യേക ഫിസിയോ വ്യായാമങ്ങൾ</li>
+              <li>✅ ഡയറ്റ് ചാർട്ട് PDF ഡൗൺലോഡ് & പ്രിന്റ്</li>
+              <li>❌ അടിയന്തര ഡോക്ടർ വീഡിയോ കോൾ</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <button class="btn btn-primary w-100" onclick="app.openPaymentModal('care', 199, 'ആരോഗ്യ സുരക്ഷ പ്ലാൻ')">
+              💳 ₹199 നൽകി സബ്സ്ക്രൈബ് ചെയ്യുക
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 3: VIP Doctor Plan -->
+        <div class="pricing-card" id="planCardVip">
+          <div class="plan-header">
+            <span class="plan-type">ഡോക്ടർ & കോച്ച് VIP</span>
+            <h3 class="plan-name">സമ്പൂർണ്ണ ഡോക്ടർ കെയർ</h3>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">499</span>
+              <span class="duration">/ മാസം</span>
+            </div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li>✅ പ്രതിമാസം 2 നേരിട്ടുള്ള ഡോക്ടർ കൺസൾട്ടേഷൻ (ഫോൺ/വീഡിയോ)</li>
+              <li>✅ പ്രൊഫഷണൽ ഹെൽത്ത് കോച്ചിന്റെ ദിവസേനയുള്ള വാട്സാപ്പ് സപ്പോർട്ട്</li>
+              <li>✅ ലാബ് ടെസ്റ്റ് റിപ്പോർട്ടുകൾ പരിശോധിച്ച് ഡയറ്റ് മാറ്റം</li>
+              <li>✅ പ്രമേഹവും യൂറിക് ആസിഡും തടയാനുള്ള പ്രത്യേക സൂപ്പർഫുഡ് ഗൈഡ്</li>
+              <li>✅ 24/7 ആരോഗ്യ സംശയങ്ങൾക്ക് മുൻഗണനാ മറുപടി</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <button class="btn btn-secondary w-100" onclick="app.openPaymentModal('vip', 499, 'സമ്പൂർണ്ണ ഡോക്ടർ കെയർ VIP')">
+              🌟 ₹499 നൽകി VIP ആകുക
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="subscription-faq mt-4 text-center">
+        <small class="text-muted">
+          🔒 100% സുരക്ഷിതമായ പേയ്മെന്റ് (UPI, Google Pay, PhonePe, Cards) • എപ്പോൾ വേണമെങ്കിലും റദ്ദാക്കാം
+        </small>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Step 7: Contact Doctor or Coach -->
+  <section class="section doctor-section bg-light" id="doctor-section">
+    <div class="container">
+      
+      <div class="section-title-wrap text-center">
+        <span class="section-badge">സഹായം തേടാം</span>
+        <h2 class="section-title">ഡോക്ടറുമായോ ഹെൽത്ത് കോച്ചുമായോ ബന്ധപ്പെടുക</h2>
+        <p class="section-subtitle">
+          ഭക്ഷണക്രമത്തെക്കുറിച്ചോ ആരോഗ്യ പ്രശ്നങ്ങളെക്കുറിച്ചോ ഉള്ള സംശയങ്ങൾ നേരിട്ട് ചോദിച്ചറിയാം.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Left: Quick Instant Actions (WhatsApp & Call) -->
+        <div class="contact-quick-box">
+          <div class="contact-method-card whatsapp-card">
+            <div class="contact-icon">💬</div>
+            <div class="contact-info">
+              <h3>വാട്സാപ്പിൽ സന്ദേശമയക്കുക</h3>
+              <p>നിങ്ങളുടെ ഭക്ഷണ സംശയങ്ങൾ മലയാളത്തിൽ ടൈപ്പ് ചെയ്ത് അയക്കൂ. ഉടൻ മറുപടി നൽകും.</p>
+              <button class="btn btn-whatsapp" onclick="app.sendWhatsAppMessage()">
+                📲 വാട്സാപ്പ് തുറക്കുക (WhatsApp Chat)
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-method-card call-card mt-3">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+              <h3>നേരിട്ട് ഫോൺ വിളിക്കുക</h3>
+              <p>തിങ്കൾ മുതൽ ശനി വരെ രാവിലെ 9:00 മുതൽ വൈകുന്നേരം 7:00 വരെ ലഭ്യമാണ്.</p>
+              <a href="tel:+919876543210" class="btn btn-call">
+                📞 +91 98765 43210 വിളിക്കുക
+              </a>
+            </div>
+          </div>
+
+          <div class="doctor-badge-info mt-3">
+            <div class="doc-avatar">👨‍⚕️</div>
+            <div class="doc-text">
+              <strong>ഡോ. മനോജ് നായർ (MBBS, DNB - ജനറൽ മെഡിസിൻ)</strong>
+              <span>ക്ലിനിക്കൽ ഡയറ്റീഷ്യൻ & വെൽനസ്സ് കോച്ച്</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Consultation Booking Form -->
+        <div class="contact-form-card">
+          <div class="card-title-row">
+            <h3>📝 കൺസൾട്ടേഷൻ ബുക്ക് ചെയ്യുക</h3>
+            <span class="badge-mini">വേഗത്തിലുള്ള മറുപടി</span>
+          </div>
+
+          <form id="doctorConsultationForm" onsubmit="event.preventDefault(); app.submitDoctorBooking();">
+            
+            <div class="form-group">
+              <label for="bookName" class="form-label">നിങ്ങളുടെ പേര് (Name) <span class="required">*</span></label>
+              <input type="text" id="bookName" class="form-control" placeholder="ഉദാ: സുരേഷ് ബാബു" required>
+            </div>
+
+            <div class="form-group">
+              <label for="bookPhone" class="form-label">ഫോൺ നമ്പർ (WhatsApp Number) <span class="required">*</span></label>
+              <input type="tel" id="bookPhone" class="form-control" placeholder="ഉദാ: 9847012345" required pattern="[0-9]{10}">
+              <small class="field-help">10 അക്ക മൊബൈൽ നമ്പർ നൽകുക</small>
+            </div>
+
+            <div class="form-group">
+              <label for="bookTime" class="form-label">സൗകര്യപ്രദമായ സമയം (Preferred Time)</label>
+              <select id="bookTime" class="form-control">
+                <option value="രാവിലെ 9:00 - 12:00">രാവിലെ 9:00 - 12:00</option>
+                <option value="ഉച്ചയ്ക്ക് 12:00 - 3:00">ഉച്ചയ്ക്ക് 12:00 - 3:00</option>
+                <option value="വൈകുന്നേരം 4:00 - 7:00" selected>വൈകുന്നേരം 4:00 - 7:00</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="bookMessage" class="form-label">നിങ്ങളുടെ ആരോഗ്യ പ്രശ്നം / സംശയം (Message)</label>
+              <textarea id="bookMessage" rows="3" class="form-control" placeholder="ഉദാ: എനിക്ക് യൂറിക് ആസിഡുണ്ട്. രാവിലെ എന്ത് കഴിക്കണം? ഇടുപ്പ് വേദനയ്ക്ക് ഏത് വ്യായാമമാണ് നല്ലത്?"></textarea>
+            </div>
+
+            <div class="booking-submit-wrap mt-3">
+              <button type="submit" class="btn btn-primary w-100">
+                ✅ കൺസൾട്ടേഷൻ സമയം സ്ഥിരീകരിക്കുക
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Booking Success Notice (Hidden by default) -->
+          <div class="booking-success-notice" id="bookingSuccessNotice" style="display: none;">
+            <div class="success-icon">🎉</div>
+            <h4>നിങ്ങളുടെ ബുക്കിംഗ് സ്വീകരിച്ചു!</h4>
+            <p>ഞങ്ങളുടെ ഹെൽത്ത് കോച്ച് നിങ്ങളെ ഉടൻ തന്നെ ഫോണിൽ ബന്ധപ്പെടുന്നതാണ്. നന്ദി!</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Payment Modal -->
+  <div class="modal-backdrop" id="paymentModalBackdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <span class="modal-sub-tag">സുരക്ഷിത പേയ്‌മെന്റ്</span>
+          <h3 id="modalPlanTitle">ആരോഗ്യ സുരക്ഷ പ്ലാൻ</h3>
+        </div>
+        <button class="modal-close-btn" onclick="app.closePaymentModal()">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <div class="modal-price-box">
+          <span class="price-label">അടയ്‌ക്കേണ്ട പ്രതിമാസ തുക:</span>
+          <span class="modal-bill-amount" id="modalBillAmount">₹199</span>
+          <span class="price-period">/ ഒരു മാസം (Monthly)</span>
+        </div>
+
+        <div class="payment-method-selector">
+          <label class="form-label">പേയ്‌മെന്റ് രീതി തിരഞ്ഞെടുക്കുക:</label>
+          
+          <div class="payment-tabs">
+            <button class="pay-tab active" onclick="app.switchPayTab('upi')">
+              📱 UPI / Google Pay
+            </button>
+            <button class="pay-tab" onclick="app.switchPayTab('card')">
+              💳 Debit / Credit Card
+            </button>
+          </div>
+
+          <!-- UPI Form & Mock QR -->
+          <div class="pay-content" id="payContentUpi">
+            <div class="upi-qr-wrapper text-center">
+              <div class="qr-mock-box">
+                <div class="qr-pattern">
+                  <div class="qr-center-icon">🌿</div>
+                </div>
+                <small>Google Pay / PhonePe / Paytm വഴി സ്കാൻ ചെയ്യാം</small>
+              </div>
+              <div class="upi-or-divider"><span>അല്ലെങ്കിൽ UPI ID നൽകുക</span></div>
+              <div class="form-group text-left">
+                <input type="text" id="upiIdInput" class="form-control" placeholder="നിങ്ങളുടെ UPI ID (ഉദാ: mobile@upi)">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Form -->
+          <div class="pay-content" id="payContentCard" style="display: none;">
+            <div class="form-group">
+              <label class="form-label">കാർഡ് നമ്പർ</label>
+              <input type="text" class="form-control" placeholder="xxxx xxxx xxxx xxxx" maxlength="19">
+            </div>
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label">കാലാവധി (MM/YY)</label>
+                <input type="text" class="form-control" placeholder="12/28" maxlength="5">
+              </div>
+              <div class="form-group">
+                <label class="form-label">CVV</label>
+                <input type="password" class="form-control" placeholder="***" maxlength="3">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Simulation Note -->
+        <div class="pay-safety-badge">
+          🛡️ ഡെമോ സുരക്ഷിത പേയ്‌മെന്റ് ഗേറ്റ്‌വേ. "ഇപ്പോൾ തുക നൽകുക" ക്ലിക്ക് ചെയ്താൽ സബ്സ്ക്രിപ്ഷൻ ആക്റ്റീവാകും.
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-outline" onclick="app.closePaymentModal()">റദ്ദാക്കുക</button>
+        <button class="btn btn-primary" id="btnPayConfirm" onclick="app.processPayment()">
+          🔒 ഇപ്പോൾ തുക നൽകുക (<span id="btnPayAmount">₹199</span>)
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <div class="footer-about">
+        <div class="brand-logo footer-logo">
+          <div class="logo-icon">🌿</div>
+          <div class="logo-text">
+            <span class="logo-title text-white">ആരോഗ്യം</span>
+            <span class="logo-subtitle text-muted-white">Aarogyam Malayalam Health</span>
+          </div>
+        </div>
+        <p class="footer-desc mt-2">
+          മലയാളികൾക്കായി പ്രത്യേകം തയ്യാറാക്കിയ ലളിതമായ ആരോഗ്യ ഡയറ്റ്, വ്യായാമ നിർദ്ദേശങ്ങൾ, വാട്ടർ ട്രാക്കർ, ഡോക്ടർ കൺസൾട്ടേഷൻ പ്ലാറ്റ്‌ഫോം.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>പ്രധാന ലിങ്കുകൾ</h4>
+        <ul>
+          <li><a href="#assessment-section">വിവരങ്ങൾ നൽകുക</a></li>
+          <li><a href="#dashboard-section">ഡാഷ്‌ബോർഡ്</a></li>
+          <li><a href="#diet-section">ഭക്ഷണ നിർദ്ദേശങ്ങൾ</a></li>
+          <li><a href="#water-section">വാട്ടർ റിമൈൻഡർ</a></li>
+          <li><a href="#exercise-section">സുരക്ഷിത വ്യായാമം</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>സഹായം & കെയർ</h4>
+        <ul>
+          <li><a href="#subscription-section">പ്രതിമാസ വരിസംഖ്യ</a></li>
+          <li><a href="#doctor-section">ഡോക്ടറുമായി ബന്ധപ്പെടുക</a></li>
+          <li><a href="tel:+919876543210">ഹെൽപ്‌ലൈൻ നമ്പർ</a></li>
+          <li><a href="javascript:void(0)" onclick="app.sendWhatsAppMessage()">വാട്സാപ്പ് ഹെൽപ്</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>പ്രധാന അറിയിപ്പ് (Disclaimer)</h4>
+        <p class="disclaimer-text">
+          ഈ വെബ്സൈറ്റിലെ വിവരങ്ങൾ പൊതുവായ അറിവിലേക്കും ബോധവൽക്കരണത്തിനും വേണ്ടിയുള്ളതാണ്. അടിയന്തര സാഹചര്യങ്ങളിലും മരുന്നുകൾ മാറ്റുന്നതിനും നിങ്ങളുടെ ഡോക്ടറുടെ നേരിട്ടുള്ള നിർദ്ദേശം തേടേണ്ടതാണ്.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom text-center">
+      <div class="container">
+        <p>&copy; 2026 ആരോഗ്യം (Aarogyam). എല്ലാ അവകാശങ്ങളും നിക്ഷിപ്തം. നിർമ്മിച്ചത് സ്നേഹത്തോടെ മലയാളത്തിൽ.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
