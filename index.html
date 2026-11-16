@@ -1,1366 +1,695 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ml" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>HEALTHCARE FOR YOU – Complete Health & Disease Prevention Platform</title>
+  <title>HEALTHCARE FOR YOU – ലളിതമായ ആരോഗ്യ & രോഗപ്രതിരോധ സഹായി</title>
   
-  <!-- Fonts -->
+  <!-- Modern Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="styles.css?v=3">
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
-  <!-- Top Emergency & Announcement Bar -->
-  <div class="top-announcement-bar" id="topAlertBar">
-    <div class="container announcement-container">
-      <div class="announcement-left">
-        <span class="pulse-indicator"></span>
-        <span id="txtEmergencyBanner"><strong>MEDICAL NOTICE:</strong> Educational prevention platform. In case of sudden chest pain, severe breathlessness, or stroke signs, call 911 / 112 / 999 immediately.</span>
+  <!-- Top Simple Notice Bar -->
+  <div class="top-simple-bar" id="topAlertBar">
+    <div class="container simple-bar-flex">
+      <div class="simple-bar-left">
+        <span class="pulse-dot"></span>
+        <span id="txtTopNotice">🌿 നിങ്ങളുടെ ആരോഗ്യം, ലളിതമായി മനസ്സിലാക്കാം. സൗജന്യ രോഗവിവരങ്ങളും പരിഹാരങ്ങളും.</span>
       </div>
-      <div class="announcement-right">
-        <a href="#disclaimer" class="announcement-link" id="linkTopDisclaimer">Medical Ethics & Disclaimer</a>
-        <span class="divider">|</span>
-        <span class="helpline-badge">📞 Emergency: 112 / 911</span>
+      <div class="simple-bar-right">
+        <span class="helpline-pill">📞 അടിയന്തിര സഹായം: 112 / 911</span>
       </div>
     </div>
   </div>
 
-  <!-- Main Sticky Navigation Bar -->
+  <!-- Main Clean Header -->
   <header class="main-header" id="mainHeader">
-    <div class="container header-container">
+    <div class="container header-flex">
       
       <!-- Brand Logo -->
       <a href="#home" class="brand-logo" id="brandLogoBtn">
-        <div class="logo-symbol">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
-            <path d="M12 5v14"/>
-            <path d="M5 12h14"/>
-          </svg>
-        </div>
-        <div class="logo-text-group">
-          <span class="brand-name" id="navBrandName">HEALTHCARE FOR YOU</span>
-          <span class="brand-sub" id="navBrandSub">Evidence-Based Prevention & Clinical Education</span>
+        <div class="logo-badge">🌿</div>
+        <div class="logo-titles">
+          <span class="brand-title">HEALTHCARE FOR YOU</span>
+          <span class="brand-tag" id="txtHeaderTag">ലളിതമായ ആരോഗ്യ സഹായി</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Menu -->
-      <nav class="nav-menu" id="navMenu">
-        <a href="#home" class="nav-item active" data-page="home" id="navLinkHome">Home</a>
-        <a href="#diseases" class="nav-item" data-page="diseases" id="navLinkDiseases">All Diseases</a>
-        <a href="#lifestyle" class="nav-item" data-page="lifestyle" id="navLinkLifestyle">Lifestyle Diseases</a>
-        <a href="#prevention" class="nav-item" data-page="prevention" id="navLinkPrevention">Prevention</a>
-        
-        <!-- Dropdown for Specialized Pages -->
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="navDropdownHealth">
-            Health Guides <i data-lucide="chevron-down" class="dropdown-icon"></i>
-          </button>
-          <div class="nav-dropdown-content">
-            <a href="#nutrition" class="dropdown-link" id="navLinkNutrition">
-              <i data-lucide="apple"></i> Healthy Nutrition
-            </a>
-            <a href="#fitness" class="dropdown-link" id="navLinkFitness">
-              <i data-lucide="dumbbell"></i> Exercise & Fitness
-            </a>
-            <a href="#mental-health" class="dropdown-link" id="navLinkMental">
-              <i data-lucide="smile"></i> Mental Health
-            </a>
-          </div>
-        </div>
-
-        <div class="nav-dropdown">
-          <button class="nav-dropdown-btn" id="navDropdownTools">
-            Clinical Tools <i data-lucide="chevron-down" class="dropdown-icon"></i>
-          </button>
-          <div class="nav-dropdown-content">
-            <a href="#symptom-checker" class="dropdown-link" id="navLinkSymptom">
-              <i data-lucide="clipboard-check"></i> Symptoms Checker
-            </a>
-            <a href="#risk-assessment" class="dropdown-link" id="navLinkRisk">
-              <i data-lucide="calculator"></i> Health Risk Assessment
-            </a>
-            <a href="#articles" class="dropdown-link" id="navLinkArticles">
-              <i data-lucide="book-open"></i> Articles & Blogs
-            </a>
-          </div>
-        </div>
-
-        <a href="#about" class="nav-item" data-page="about" id="navLinkAbout">About</a>
-        <a href="#contact" class="nav-item" data-page="contact" id="navLinkContact">Contact</a>
-        <a href="#disclaimer" class="nav-item" data-page="disclaimer" id="navLinkDisclaimer">Disclaimer</a>
+      <!-- Streamlined Main Navigation -->
+      <nav class="nav-links-wrap" id="navMenu">
+        <a href="#home" class="nav-btn active" data-page="home" id="navHome">
+          <i data-lucide="home"></i> <span>ഹോം</span>
+        </a>
+        <a href="#diseases" class="nav-btn" data-page="diseases" id="navDiseases">
+          <i data-lucide="stethoscope"></i> <span>രോഗങ്ങളും പരിഹാരങ്ങളും</span>
+        </a>
+        <a href="#nutrition" class="nav-btn" data-page="nutrition" id="navNutrition">
+          <i data-lucide="apple"></i> <span>ഭക്ഷണക്രമം</span>
+        </a>
+        <a href="#prevention" class="nav-btn" data-page="prevention" id="navPrevention">
+          <i data-lucide="shield-check"></i> <span>രോഗപ്രതിരോധം</span>
+        </a>
+        <a href="#tools" class="nav-btn" data-page="tools" id="navTools">
+          <i data-lucide="calculator"></i> <span>കാൽക്കുലേറ്ററുകൾ</span>
+        </a>
+        <a href="#help" class="nav-btn" data-page="help" id="navHelp">
+          <i data-lucide="info"></i> <span>സഹായം</span>
+        </a>
       </nav>
 
-      <!-- Header Actions: Search, Language Switcher, Mobile Toggle -->
-      <div class="header-actions">
-        <!-- Live Quick Search Trigger -->
-        <div class="search-input-wrapper">
-          <i data-lucide="search" class="search-icon-inside"></i>
-          <input type="text" id="globalHeaderSearch" placeholder="Search diseases, symptoms..." aria-label="Search">
-        </div>
-
-        <!-- Language Selector -->
-        <div class="lang-selector-wrapper">
-          <i data-lucide="globe" class="lang-globe-icon"></i>
-          <select id="langSelector" aria-label="Language Selector">
+      <!-- Language Selector & Mobile Button -->
+      <div class="header-right-actions">
+        <div class="lang-dropdown-box">
+          <i data-lucide="globe" class="globe-icon"></i>
+          <select id="langSelector" aria-label="Select Language">
+            <option value="ml" selected>മലയാളം (Malayalam)</option>
             <option value="en">English</option>
-            <option value="ml">മലയാളം</option>
-            <option value="hi">हिन्दी</option>
+            <option value="hi">हिन्दी (Hindi)</option>
             <option value="ar">العربية (Arabic)</option>
           </select>
         </div>
 
-        <!-- Mobile Hamburger Toggle -->
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
-          <i data-lucide="menu" id="menuIcon"></i>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
         </button>
       </div>
 
     </div>
   </header>
 
-  <!-- Mobile Off-Canvas Drawer -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <div class="mobile-drawer-header">
-      <span class="mobile-drawer-title">HEALTHCARE FOR YOU</span>
-      <button class="close-drawer-btn" id="closeDrawerBtn"><i data-lucide="x"></i></button>
+  <!-- Mobile Simple Navigation Drawer -->
+  <div class="mobile-simple-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-top">
+      <span class="drawer-title">HEALTHCARE FOR YOU</span>
+      <button class="drawer-close-btn" id="closeDrawerBtn"><i data-lucide="x"></i></button>
     </div>
-    <div class="mobile-nav-links" id="mobileNavLinks">
-      <a href="#home" class="mobile-link active" data-page="home">Home</a>
-      <a href="#diseases" class="mobile-link" data-page="diseases">All Diseases Library</a>
-      <a href="#lifestyle" class="mobile-link" data-page="lifestyle">Lifestyle Diseases</a>
-      <a href="#prevention" class="mobile-link" data-page="prevention">Disease Prevention Centre</a>
-      <a href="#nutrition" class="mobile-link" data-page="nutrition">Healthy Food & Nutrition</a>
-      <a href="#fitness" class="mobile-link" data-page="fitness">Exercise & Fitness</a>
-      <a href="#mental-health" class="mobile-link" data-page="mental-health">Mental Health & Resilience</a>
-      <a href="#symptom-checker" class="mobile-link" data-page="symptom-checker">Symptoms Checker</a>
-      <a href="#risk-assessment" class="mobile-link" data-page="risk-assessment">Health Risk Assessment & Tools</a>
-      <a href="#articles" class="mobile-link" data-page="articles">Health Articles & Blogs</a>
-      <a href="#about" class="mobile-link" data-page="about">About Us</a>
-      <a href="#contact" class="mobile-link" data-page="contact">Contact Us</a>
-      <a href="#disclaimer" class="mobile-link" data-page="disclaimer">Medical Disclaimer</a>
+    <div class="mobile-drawer-links">
+      <a href="#home" class="m-link active" data-page="home"><i data-lucide="home"></i> ഹോം (Home)</a>
+      <a href="#diseases" class="m-link" data-page="diseases"><i data-lucide="stethoscope"></i> രോഗങ്ങളും പരിഹാരങ്ങളും (Diseases & Solutions)</a>
+      <a href="#nutrition" class="m-link" data-page="nutrition"><i data-lucide="apple"></i> ഭക്ഷണക്രമം (Diet & Nutrition)</a>
+      <a href="#prevention" class="m-link" data-page="prevention"><i data-lucide="shield-check"></i> രോഗപ്രതിരോധം (Prevention)</a>
+      <a href="#tools" class="m-link" data-page="tools"><i data-lucide="calculator"></i> കാൽക്കുലേറ്ററുകൾ (Health Tools)</a>
+      <a href="#help" class="m-link" data-page="help"><i data-lucide="info"></i> സഹായവും വിവരങ്ങളും (Help & About)</a>
     </div>
   </div>
 
-  <!-- MAIN APP ROUTER CONTENT CONTAINER -->
-  <main id="appMain" class="main-content-area">
+  <!-- MAIN APP ROUTER VIEWS -->
+  <main id="appMain" class="main-body">
 
-    <!-- ================= PAGE 1: HOME ================= -->
+    <!-- ================= 1. HOME VIEW (ലളിതമായ ഹോം പേജ്) ================= -->
     <section id="view-home" class="app-view active">
       
-      <!-- Hero Section -->
-      <div class="hero-section">
-        <div class="container hero-container">
-          <div class="hero-text-content">
-            <span class="hero-badge">
-              <i data-lucide="shield-check"></i> Authoritative Medical Education
-            </span>
-            <h1 class="hero-headline" id="heroHeadline">
-              Your Health. <br><span class="accent-gradient">Your Future.</span> <br>Your Responsibility.
-            </h1>
-            <p class="hero-subheading" id="heroSubheading">
-              Understand diseases in simple language, discover evidence-based prevention methods, and build a healthier lifestyle with trusted digital health education.
-            </p>
-            <div class="hero-cta-group">
-              <a href="#diseases" class="btn btn-primary" id="btnHeroExplore">
-                <i data-lucide="book-open"></i> <span>Explore Diseases</span>
-              </a>
-              <a href="#risk-assessment" class="btn btn-secondary" id="btnHeroStart">
-                <i data-lucide="activity"></i> <span>Start Your Healthy Journey</span>
-              </a>
-            </div>
-            <div class="hero-trust-indicators">
-              <span><i data-lucide="check-circle-2"></i> Referenced from WHO & CDC</span>
-              <span><i data-lucide="check-circle-2"></i> 60+ Disease Guides</span>
-              <span><i data-lucide="check-circle-2"></i> 100% Free & Independent</span>
-            </div>
+      <!-- Friendly Simple Hero Section -->
+      <div class="simple-hero">
+        <div class="container hero-inner">
+          <span class="hero-chip" id="txtHeroChip">
+            ✨ വിശ്വസനീയമായ സൗജന്യ ആരോഗ്യ ഗൈഡ്
+          </span>
+          <h1 class="simple-hero-title" id="txtHeroTitle">
+            നിങ്ങളുടെ ആരോഗ്യം, <span class="highlight-green">ലളിതമായി മനസ്സിലാക്കാം.</span>
+          </h1>
+          <p class="simple-hero-desc" id="txtHeroDesc">
+            പനി മുതൽ എല്ല് പൊട്ടൽ വരെയും, പ്രമേഹം മുതൽ കൊളസ്ട്രോൾ വരെയുമുള്ള എല്ലാ രോഗങ്ങളെക്കുറിച്ചും ലളിതമായി അറിയൂ. എന്ത് ഭക്ഷണം കഴിക്കണം, ഒഴിവാക്കണം, എന്ത് വ്യായാമവും പരിഹാരങ്ങളും ചെയ്യണമെന്ന് എളുപ്പത്തിൽ കണ്ടെത്താം.
+          </p>
+
+          <!-- Big Centered Search Bar -->
+          <div class="big-search-box">
+            <i data-lucide="search" class="search-ico"></i>
+            <input type="text" id="homeMainSearch" placeholder="ഏത് രോഗവും തിരയുക (ഉദാ: പനി, പ്രമേഹം, ബി.പി, എല്ല് പൊട്ടൽ, വാതം, കൊളസ്ട്രോൾ)..." autocomplete="off">
+            <button class="btn-search-go" id="btnHomeSearchGo">തിരയുക</button>
           </div>
-          <div class="hero-visual">
-            <div class="hero-card-stack">
-              <div class="floating-stat-card card-top">
-                <div class="stat-icon-wrap bg-blue"><i data-lucide="activity"></i></div>
-                <div>
-                  <div class="stat-number">74%</div>
-                  <div class="stat-label">Global deaths caused by Non-Communicable Diseases (WHO)</div>
-                </div>
-              </div>
-              <div class="floating-stat-card card-middle">
-                <div class="stat-icon-wrap bg-green"><i data-lucide="heart"></i></div>
-                <div>
-                  <div class="stat-number">80%</div>
-                  <div class="stat-label">Premature heart disease & diabetes cases are preventable</div>
-                </div>
-              </div>
-              <div class="floating-stat-card card-bottom">
-                <div class="stat-icon-wrap bg-purple"><i data-lucide="smile"></i></div>
-                <div>
-                  <div class="stat-number">150 mins</div>
-                  <div class="stat-label">Weekly moderate activity cuts all-cause mortality by 31%</div>
-                </div>
-              </div>
-            </div>
+
+          <!-- Quick Disease Shortcut Pills -->
+          <div class="quick-shortcuts-row">
+            <span class="quick-label" id="txtQuickSearch">പെട്ടെന്ന് കാണാം:</span>
+            <button class="quick-pill" data-disease="fever-infection">🌡️ പനി (Fever)</button>
+            <button class="quick-pill" data-disease="type-2-diabetes">🩸 പ്രമേഹം (Sugar)</button>
+            <button class="quick-pill" data-disease="hypertension">💓 പ്രഷർ (High BP)</button>
+            <button class="quick-pill" data-disease="high-cholesterol">🫀 കൊളസ്ട്രോൾ</button>
+            <button class="quick-pill" data-disease="bone-fracture">🦴 എല്ല് പൊട്ടൽ (Fracture)</button>
+            <button class="quick-pill" data-disease="gout">🧪 യൂറിക് ആസിഡ് (Gout)</button>
+            <button class="quick-pill" data-disease="gastritis">🔥 ഗ്യാസ് / അസിഡിറ്റി</button>
+            <button class="quick-pill" data-disease="asthma">🫁 ആസ്ത്മ / ശ്വാസംമുട്ടൽ</button>
           </div>
         </div>
       </div>
 
-      <!-- Quick Disease Search & Category Bar -->
-      <div class="quick-category-strip">
-        <div class="container">
-          <div class="strip-header">
-            <h3 id="txtExploreCategories">Explore by Disease Category</h3>
-            <a href="#diseases" class="view-all-link">View All 60+ Diseases <i data-lucide="arrow-right"></i></a>
-          </div>
-          <div class="category-pills-scroll" id="homeCategoryPills">
-            <!-- Populated dynamically via JS -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Featured Diseases Section -->
-      <div class="section-container">
-        <div class="container">
-          <div class="section-title-wrap">
-            <span class="section-tag" id="tagFeatured">Clinical Library</span>
-            <h2 class="section-heading" id="headingFeatured">Featured Health Conditions</h2>
-            <p class="section-sub" id="subFeatured">Comprehensive clinical overviews, warning signs, safe nutrition, and evidence-based prevention.</p>
-          </div>
-          <div class="disease-grid" id="featuredDiseasesGrid">
-            <!-- Injected via JavaScript -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Popular Prevention Guides -->
-      <div class="section-container bg-subtle">
-        <div class="container">
-          <div class="section-title-wrap">
-            <span class="section-tag" id="tagPrevention">Prevention Centre</span>
-            <h2 class="section-heading" id="headingPrevention">Popular Disease Prevention Guides</h2>
-            <p class="section-sub" id="subPrevention">Practical daily habits and actionable protocols grounded in clinical evidence.</p>
-          </div>
-          <div class="prevention-grid" id="homePreventionGrid">
-            <!-- Injected via JavaScript -->
-          </div>
-        </div>
-      </div>
-
-      <!-- Daily Healthy Habits Checklist Banner -->
-      <div class="section-container">
-        <div class="container">
-          <div class="daily-habits-banner">
-            <div class="habits-header">
-              <div class="habits-icon-box"><i data-lucide="check-square"></i></div>
-              <div>
-                <h2>Daily Pillars of Disease Prevention</h2>
-                <p>Six foundational daily habits that dramatically reduce chronic illness risks:</p>
-              </div>
+      <!-- 4 Quick Action Cards -->
+      <div class="container quick-actions-container">
+        <div class="actions-grid">
+          
+          <a href="#diseases" class="action-card card-blue">
+            <div class="action-card-icon"><i data-lucide="book-open"></i></div>
+            <div class="action-card-text">
+              <h3 id="txtAction1Title">രോഗങ്ങളും പരിഹാരങ്ങളും</h3>
+              <p id="txtAction1Desc">60+ രോഗങ്ങളുടെ ലക്ഷണങ്ങൾ, കാരണങ്ങൾ, ലളിതമായ പരിഹാരങ്ങൾ.</p>
             </div>
-            <div class="habits-grid">
-              <div class="habit-item">
-                <span class="habit-num">01</span>
-                <h4>The Half-Plate Rule</h4>
-                <p>Fill 50% of every lunch and dinner with non-starchy vegetables, salads, or greens.</p>
+            <i data-lucide="arrow-right" class="card-arrow"></i>
+          </a>
+
+          <a href="#nutrition" class="action-card card-green">
+            <div class="action-card-icon"><i data-lucide="apple"></i></div>
+            <div class="action-card-text">
+              <h3 id="txtAction2Title">ഭക്ഷണക്രമം (Diet Plans)</h3>
+              <p id="txtAction2Desc">ഏത് രോഗത്തിന് എന്ത് കഴിക്കാം, ഏതൊക്കെ ഭക്ഷണങ്ങൾ ഒഴിവാക്കണം?</p>
+            </div>
+            <i data-lucide="arrow-right" class="card-arrow"></i>
+          </a>
+
+          <a href="#tools" class="action-card card-amber">
+            <div class="action-card-icon"><i data-lucide="scale"></i></div>
+            <div class="action-card-text">
+              <h3 id="txtAction3Title">ബി.എം.ഐ & ആരോഗ്യ കാൽക്കുലേറ്റർ</h3>
+              <p id="txtAction3Desc">നിങ്ങളുടെ ഉയരവും തൂക്കവും നൽകി ആരോഗ്യം 1 മിനിറ്റിൽ അറിയാം.</p>
+            </div>
+            <i data-lucide="arrow-right" class="card-arrow"></i>
+          </a>
+
+          <a href="#prevention" class="action-card card-teal">
+            <div class="action-card-icon"><i data-lucide="shield-check"></i></div>
+            <div class="action-card-text">
+              <h3 id="txtAction4Title">രോഗപ്രതിരോധ ശീലങ്ങൾ</h3>
+              <p id="txtAction4Desc">പ്രമേഹവും ബി.പിയും വരാതിരിക്കാൻ പാലിക്കേണ്ട ദിനചര്യകൾ.</p>
+            </div>
+            <i data-lucide="arrow-right" class="card-arrow"></i>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Most Common Health Concerns Section (സാധാരണ രോഗങ്ങൾ) -->
+      <div class="container section-block">
+        <div class="simple-section-header">
+          <div>
+            <span class="sub-chip">ലളിതമായ ഗൈഡ്</span>
+            <h2 id="txtCommonHeading">ഏറ്റവും സാധാരണ രോഗങ്ങളും പരിഹാരങ്ങളും</h2>
+            <p id="txtCommonSub">നിങ്ങൾ ഏറ്റവും കൂടുതൽ ചോദിക്കുന്ന രോഗങ്ങളുടെ സമ്പൂർണ്ണ വിവരങ്ങളും ഭക്ഷണക്രമവും:</p>
+          </div>
+          <a href="#diseases" class="btn-simple-outline" id="btnSeeAllDiseases">എല്ലാ 60 രോഗങ്ങളും കാണുക →</a>
+        </div>
+
+        <div class="cards-grid" id="commonDiseasesGrid">
+          <!-- Populated dynamically via JS with top conditions: Fever, Diabetes, BP, Bone Fracture, Gout, Cholesterol, Acidity, Migraine -->
+        </div>
+      </div>
+
+      <!-- Quick 1-Minute Health Tool on Home -->
+      <div class="container section-block">
+        <div class="home-tool-banner">
+          <div class="tool-banner-left">
+            <span class="sub-chip-white">⚡ പെട്ടെന്ന് പരിശോധിക്കാം</span>
+            <h2 id="txtHomeToolTitle">നിങ്ങളുടെ ബി.എം.ഐ (തൂക്കം) പരിശോധിക്കൂ</h2>
+            <p id="txtHomeToolDesc">നിങ്ങളുടെ ഉയരവും തൂക്കവും നൽകി ആരോഗ്യം നോർമൽ ആണോ അതോ അമിതവണ്ണമുണ്ടോ എന്ന് ഉടനടി അറിയാം.</p>
+            
+            <div class="mini-tool-form">
+              <div class="mini-input-group">
+                <label>ഉയരം (സെന്റീമീറ്റർ / cm)</label>
+                <input type="number" id="quickHeight" placeholder="e.g. 170" min="50" max="250">
               </div>
-              <div class="habit-item">
-                <span class="habit-num">02</span>
-                <h4>Hydrate With Pure Water</h4>
-                <p>Drink 2 to 3 liters of water daily; eliminate all sugary sodas and fruit juices.</p>
+              <div class="mini-input-group">
+                <label>തൂക്കം (കിലോഗ്രാം / kg)</label>
+                <input type="number" id="quickWeight" placeholder="e.g. 68" min="20" max="250">
               </div>
-              <div class="habit-item">
-                <span class="habit-num">03</span>
-                <h4>30 Minutes of Movement</h4>
-                <p>Brisk walking, cycling, or resistance training. Take a 10-minute stroll after meals.</p>
+              <button class="btn-tool-calc" id="btnQuickBMICalc">പരിശോധിക്കുക</button>
+            </div>
+
+            <div id="quickBMIResult" class="quick-bmi-result hidden"></div>
+          </div>
+          <div class="tool-banner-right">
+            <div class="bmi-scale-card">
+              <h4>തൂക്കത്തിന്റെ കണക്ക് (BMI Guide):</h4>
+              <div class="scale-item item-blue">
+                <span class="scale-label">18.5 ൽ താഴെ:</span>
+                <span class="scale-val">തൂക്കക്കുറവ് (Underweight)</span>
               </div>
-              <div class="habit-item">
-                <span class="habit-num">04</span>
-                <h4>7-8 Hours Restorative Sleep</h4>
-                <p>Consistent sleep anchors your circadian rhythm and flushes brain beta-amyloid.</p>
+              <div class="scale-item item-green">
+                <span class="scale-label">18.5 – 24.9:</span>
+                <span class="scale-val">ആരോഗ്യകരമായ തൂക്കം (Healthy)</span>
               </div>
-              <div class="habit-item">
-                <span class="habit-num">05</span>
-                <h4>Daily Stress Reset</h4>
-                <p>5 minutes of diaphragmatic breathing (4-4-4-4 box breathing) to lower cortisol.</p>
+              <div class="scale-item item-orange">
+                <span class="scale-label">25.0 – 29.9:</span>
+                <span class="scale-val">അല്പം കൂടുതൽ (Overweight)</span>
               </div>
-              <div class="habit-item">
-                <span class="habit-num">06</span>
-                <h4>Know Your Health Numbers</h4>
-                <p>Track your Blood Pressure (< 120/80), Fasting Glucose (< 100), and LDL (< 100).</p>
+              <div class="scale-item item-red">
+                <span class="scale-label">30.0 ന് മുകളിൽ:</span>
+                <span class="scale-val">അമിതവണ്ണം (Obese)</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Latest Medical Articles Teaser -->
-      <div class="section-container bg-subtle">
-        <div class="container">
-          <div class="section-title-wrap">
-            <span class="section-tag">Medical Insights</span>
-            <h2>Latest Medically Reviewed Articles</h2>
-            <p class="section-sub">Written and peer-reviewed by physicians, clinical nutritionists, and researchers.</p>
-          </div>
-          <div class="articles-grid" id="homeArticlesGrid">
-            <!-- Injected via JavaScript -->
-          </div>
-          <div class="center-cta-wrap">
-            <a href="#articles" class="btn btn-outline">Browse All Articles & Research <i data-lucide="arrow-right"></i></a>
+      <!-- 5 Daily Golden Rules -->
+      <div class="container section-block">
+        <div class="golden-rules-card">
+          <h2 id="txtGoldenTitle">ആരോഗ്യം നിലനിർത്താൻ 5 ലളിതമായ സുവർണ്ണ നിയമങ്ങൾ</h2>
+          <div class="rules-flex">
+            <div class="rule-box">
+              <span class="rule-icon">🥗</span>
+              <h4>1. പകുതി പ്ലേറ്റ് പച്ചക്കറി</h4>
+              <p>ഉച്ചയൂണിനും അത്താഴത്തിനും പ്ലേറ്റിന്റെ പകുതി ഭാഗം പച്ചക്കറികളോ ഇലക്കറികളോ സാലഡോ കഴിക്കുക.</p>
+            </div>
+            <div class="rule-box">
+              <span class="rule-icon">💧</span>
+              <h4>2. ധാരാളം ശുദ്ധജലം</h4>
+              <p>ദിവസവും 8 മുതൽ 10 ഗ്ലാസ്സ് (2-3 ലിറ്റർ) വെള്ളം കുടിക്കുക. മധുര പാനീയങ്ങൾ ഒഴിവാക്കുക.</p>
+            </div>
+            <div class="rule-box">
+              <span class="rule-icon">🚶</span>
+              <h4>3. 30 മിനിറ്റ് നടത്തം</h4>
+              <p>ദിവസവും 30 മിനിറ്റ് വേഗത്തിൽ നടക്കുക. ആഹാരം കഴിഞ്ഞയുടൻ 10 മിനിറ്റ് നടക്കുന്നത് ഷുഗർ കുറയ്ക്കും.</p>
+            </div>
+            <div class="rule-box">
+              <span class="rule-icon">😴</span>
+              <h4>4. 7-8 മണിക്കൂർ നല്ല ഉറക്കം</h4>
+              <p>രാത്രി കൃത്യസമയത്ത് ഉറങ്ങുക. ഉറങ്ങുന്നതിന് ഒരു മണിക്കൂർ മുൻപ് മൊബൈൽ ഫോൺ മാറ്റിവെക്കുക.</p>
+            </div>
+            <div class="rule-box">
+              <span class="rule-icon">🧂</span>
+              <h4>5. ഉപ്പും എണ്ണയും കുറയ്ക്കുക</h4>
+              <p>ഭക്ഷണത്തിൽ ഉപ്പും വറുത്ത എണ്ണപ്പലഹാരങ്ങളും കുറയ്ക്കുന്നത് ബി.പിയും കൊളസ്ട്രോളും തടയും.</p>
+            </div>
           </div>
         </div>
       </div>
 
     </section>
 
-    <!-- ================= PAGE 2: ALL DISEASES ================= -->
+    <!-- ================= 2. ALL DISEASES & SOLUTIONS VIEW ================= -->
     <section id="view-diseases" class="app-view">
-      <div class="page-hero">
+      <div class="view-header-strip">
         <div class="container">
-          <span class="page-tag">Clinical Repository</span>
-          <h1 class="page-title" id="pageTitleDiseases">Complete Disease Library (A-Z)</h1>
-          <p class="page-desc">Comprehensive medical knowledge covering 60+ diseases across 9 categories. Every disease includes symptoms, causes, diagnosis, treatments, nutrition, and prevention.</p>
+          <span class="sub-chip">സമ്പൂർണ്ണ രോഗവിവരങ്ങൾ (A-Z)</span>
+          <h1 id="txtDiseasesPageTitle">രോഗങ്ങളും പരിഹാരങ്ങളും (All Diseases)</h1>
+          <p id="txtDiseasesPageDesc">60+ രോഗങ്ങളെക്കുറിച്ച് ലളിതമായി അറിയൂ. ലക്ഷണങ്ങൾ, കാരണങ്ങൾ, ഭക്ഷണക്രമം, വ്യായാമം, ചികിത്സാ പരിഹാരങ്ങൾ എന്നിവ താഴെ നൽകിയിരിക്കുന്നു.</p>
           
-          <!-- Live Disease Search & Filter Controls -->
-          <div class="search-filter-card">
-            <div class="search-bar-row">
-              <div class="search-input-field">
+          <!-- Search & Category Filters -->
+          <div class="filter-controls-card">
+            <div class="filter-search-row">
+              <div class="f-search-input">
                 <i data-lucide="search"></i>
-                <input type="text" id="diseaseLibrarySearch" placeholder="Search by disease name, symptom, or keyword (e.g. fever, diabetes, chest pain)...">
-                <button id="clearSearchBtn" class="clear-input-btn"><i data-lucide="x"></i></button>
+                <input type="text" id="diseaseSearchInput" placeholder="രോഗത്തിന്റെ പേരോ ലക്ഷണങ്ങളോ തിരയുക...">
+                <button id="btnClearDiseaseSearch" class="btn-clear"><i data-lucide="x"></i></button>
               </div>
-              <div class="category-dropdown-field">
-                <select id="diseaseCategoryFilter">
-                  <option value="all">All 9 Categories</option>
-                  <!-- Populated dynamically -->
+              <div class="f-select-wrap">
+                <select id="categorySelect">
+                  <option value="all">എല്ലാ വിഭാഗങ്ങളും (All Categories)</option>
+                  <!-- Injected via JS -->
                 </select>
               </div>
             </div>
 
-            <!-- A to Z Alphabet Filter Bar -->
-            <div class="alphabet-filter-strip" id="alphabetFilterStrip">
-              <button class="alpha-btn active" data-letter="all">ALL</button>
-              <!-- Letters A-Z injected via JS -->
+            <!-- A to Z Filter Pills -->
+            <div class="a-z-strip" id="alphabetStrip">
+              <button class="a-z-btn active" data-letter="all">ALL</button>
+              <!-- A-Z letters injected via JS -->
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container py-6">
-        <div class="results-meta-bar">
-          <span id="diseaseResultsCount">Showing 60 conditions</span>
-          <div class="view-toggle-btns">
-            <span class="info-pill"><i data-lucide="info"></i> Click any condition to view all 17 clinical sections</span>
-          </div>
+      <div class="container py-4">
+        <div class="list-meta-row">
+          <span id="diseaseCountText">60 രോഗങ്ങൾ ലഭ്യമാണ്</span>
+          <span class="click-tip">💡 ഏത് രോഗത്തിലും ക്ലിക്ക് ചെയ്താൽ മുഴുവൻ പരിഹാരങ്ങളും കാണാം</span>
         </div>
-        <div class="disease-grid" id="allDiseasesGrid">
+        <div class="cards-grid" id="allDiseasesGrid">
           <!-- Populated dynamically via JS -->
         </div>
       </div>
     </section>
 
-    <!-- ================= PAGE 3: LIFESTYLE DISEASES ================= -->
-    <section id="view-lifestyle" class="app-view">
-      <div class="page-hero bg-lifestyle">
-        <div class="container">
-          <span class="page-tag">Metabolic Health Focus</span>
-          <h1>Lifestyle Diseases & Metabolic Health</h1>
-          <p class="page-desc">Chronic conditions driven by modern sedentary living, ultra-processed nutrition, and environmental stress. Discover the science of metabolic reversal and long-term vitality.</p>
-        </div>
-      </div>
-
-      <div class="container py-6">
-        <!-- The Metabolic Spectrum Infographic Card -->
-        <div class="info-banner-card">
-          <div class="banner-badge"><i data-lucide="zap"></i> The Pathophysiological Cascade</div>
-          <h2>From Cellular Insulin Resistance to Cardiovascular Events</h2>
-          <p>Lifestyle diseases do not happen overnight. They follow a predictable 10 to 20 year biological trajectory that starts silently at the cellular level:</p>
-          <div class="timeline-steps">
-            <div class="t-step">
-              <span class="t-badge">Stage 1</span>
-              <h4>Energy Overload</h4>
-              <p>Sedentary lifestyle and ultra-processed carbs lead to visceral abdominal fat storage.</p>
-            </div>
-            <div class="t-step">
-              <span class="t-badge">Stage 2</span>
-              <h4>Insulin Resistance</h4>
-              <p>Cells resist glucose uptake. Pancreas compensates by pumping out excessive insulin.</p>
-            </div>
-            <div class="t-step">
-              <span class="t-badge">Stage 3</span>
-              <h4>Vascular Damage</h4>
-              <p>Hyperinsulinemia and high glucose damage endothelium, driving hypertension and fatty liver.</p>
-            </div>
-            <div class="t-step">
-              <span class="t-badge">Stage 4</span>
-              <h4>Plaque & Thrombosis</h4>
-              <p>Oxidized LDL builds arterial plaques, culminating in heart attacks, strokes, or kidney failure.</p>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="subsection-title">Major Lifestyle & Metabolic Illnesses</h3>
-        <div class="disease-grid" id="lifestyleDiseasesGrid">
-          <!-- Populated dynamically -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PAGE 4: DISEASE PREVENTION CENTRE ================= -->
-    <section id="view-prevention" class="app-view">
-      <div class="page-hero bg-prevention">
-        <div class="container">
-          <span class="page-tag">Evidence-Based Prevention</span>
-          <h1>Disease Prevention Centre</h1>
-          <p class="page-desc">10 Targeted, evidence-based prevention guides from leading global health authorities. Practical daily protocols to keep vital organs strong.</p>
-        </div>
-      </div>
-
-      <div class="container py-6">
-        <div class="prevention-accordion-list" id="preventionDetailList">
-          <!-- Rendered dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PAGE 5: HEALTHY FOOD & NUTRITION ================= -->
+    <!-- ================= 3. FOOD & DIET VIEW (ഭക്ഷണക്രമം) ================= -->
     <section id="view-nutrition" class="app-view">
-      <div class="page-hero bg-nutrition">
+      <div class="view-header-strip bg-green-strip">
         <div class="container">
-          <span class="page-tag">Therapeutic Nutrition</span>
-          <h1>Healthy Food & Clinical Nutrition</h1>
-          <p class="page-desc">Nourish your body with real, whole foods. Explore balanced meal ideas, evidence-based superfoods, portion guidance, and disease-specific dietary strategies.</p>
+          <span class="sub-chip">ആരോഗ്യകരമായ ഭക്ഷണക്രമം</span>
+          <h1 id="txtNutritionPageTitle">ഭക്ഷണവും ആരോഗ്യവും (Healthy Diet)</h1>
+          <p id="txtNutritionPageDesc">ശരിയായ ഭക്ഷണക്രമത്തിലൂടെ രോഗങ്ങളെ നിയന്ത്രിക്കാം. പ്രഭാതഭക്ഷണം, ഉച്ചഭക്ഷണം, അത്താഴം എന്നിവയുടെ കൃത്യമായ രീതികളും വിവിധ രോഗങ്ങൾക്ക് കഴിക്കേണ്ടതും ഒഴിവാക്കേണ്ടതുമായ ഭക്ഷണങ്ങളും.</p>
         </div>
       </div>
 
-      <div class="container py-6">
-        <!-- Medical Disclaimer Alert for Nutrition -->
-        <div class="alert-box alert-info">
-          <i data-lucide="info"></i>
-          <div>
-            <strong>Medical Nutrition Notice:</strong> While nutrient-dense food supports cellular health and reduces disease risk, foods are not claimed to cure diseases or substitute for medical therapy.
+      <div class="container py-4">
+        <!-- Quick Food Guide for Major Diseases -->
+        <div class="food-tabs-container">
+          <h2 class="sub-heading-text" id="txtFoodByDiseaseHeading">പ്രധാന രോഗങ്ങൾക്ക് കഴിക്കേണ്ടതും ഒഴിവാക്കേണ്ടതുമായവ</h2>
+          
+          <div class="food-condition-cards-grid" id="conditionFoodsGrid">
+            <!-- Populated dynamically: Diabetes, BP, Cholesterol, Gout/Uric Acid, Fatty Liver, Kidney -->
           </div>
         </div>
 
-        <!-- The Healthy Eating Plate -->
-        <div class="plate-guide-card">
-          <div class="plate-text">
-            <h2>The Science-Backed 'Half-Plate' Rule</h2>
-            <p>Endorsed by Harvard T.H. Chan School of Public Health and WHO for preventing metabolic diseases:</p>
-            <ul>
-              <li><strong>½ Plate (50%):</strong> Colorful Vegetables & Fruits (Spinach, broccoli, carrots, cucumbers, berries).</li>
-              <li><strong>¼ Plate (25%):</strong> Whole, Intact Grains (Oats, brown basmati, quinoa, barley).</li>
-              <li><strong>¼ Plate (25%):</strong> Clean, High-Quality Protein (Fish, poultry, eggs, legumes, lentils, tofu).</li>
-              <li><strong>Cooking Lipids:</strong> Extra virgin olive oil, cold-pressed avocado oil, seeds, and nuts.</li>
-            </ul>
-          </div>
-          <div class="plate-visual">
-            <div class="plate-circle">
-              <div class="slice veggies">50% Vegetables & Fruits</div>
-              <div class="slice grains">25% Whole Grains</div>
-              <div class="slice protein">25% Healthy Protein</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Meal Ideas Tabs (Breakfast, Lunch, Dinner) -->
-        <div class="nutrition-tabs-wrap">
-          <h3 class="subsection-title">Nutrient-Dense Meal Plans</h3>
-          <div class="meal-ideas-grid" id="mealIdeasContainer">
-            <!-- Injected via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Condition-Specific Nutrition -->
-        <div class="condition-foods-section">
-          <h3 class="subsection-title">Condition-Specific Therapeutic Nutrition</h3>
-          <div class="condition-foods-grid" id="conditionFoodsContainer">
-            <!-- Injected via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Food Pillars (Fruits/Veggies, Protein, Fiber, Fats) -->
-        <div class="food-pillars-section">
-          <h3 class="subsection-title">The Four Nutritional Pillars</h3>
-          <div class="food-pillars-grid" id="foodPillarsContainer">
-            <!-- Injected via JavaScript -->
+        <!-- 3 Simple Meals of the Day -->
+        <div class="section-block">
+          <h2 class="sub-heading-text" id="txtMealsHeading">ദിവസേനയുള്ള ആരോഗ്യകരമായ ഭക്ഷണ മാതൃകകൾ</h2>
+          <div class="meals-cards-grid" id="mealIdeasGrid">
+            <!-- Populated dynamically -->
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= PAGE 6: EXERCISE & FITNESS ================= -->
-    <section id="view-fitness" class="app-view">
-      <div class="page-hero bg-fitness">
+    <!-- ================= 4. PREVENTION VIEW (രോഗപ്രതിരോധം) ================= -->
+    <section id="view-prevention" class="app-view">
+      <div class="view-header-strip bg-teal-strip">
         <div class="container">
-          <span class="page-tag">Physical Activity Medicine</span>
-          <h1>Exercise & Physical Fitness</h1>
-          <p class="page-desc">Exercise is medicine. Learn the exact physical activity prescriptions recommended by WHO to optimize cardiopulmonary endurance, metabolic insulin sensitivity, and joint longevity.</p>
+          <span class="sub-chip">രോഗപ്രതിരോധ മാർഗ്ഗങ്ങൾ</span>
+          <h1 id="txtPreventionPageTitle">രോഗങ്ങൾ വരാതിരിക്കാൻ (Disease Prevention)</h1>
+          <p id="txtPreventionPageDesc">രോഗങ്ങൾ വന്ന ശേഷം ചികിത്സിക്കുന്നതിനേക്കാൾ നല്ലത് വരാതെ നോക്കുന്നതാണ്. പ്രമേഹം, രക്തസമ്മർദ്ദം, ഹൃദ്രോഗം, ഫാറ്റി ലിവർ തുടങ്ങിയവ തടയാൻ ലളിതമായ വഴികൾ.</p>
         </div>
       </div>
 
-      <div class="container py-6">
-        <div class="fitness-prescriptions-grid">
-          <div class="fitness-card">
-            <div class="fit-icon"><i data-lucide="heart"></i></div>
-            <h3>1. Aerobic Conditioning</h3>
-            <span class="fit-target">150 - 300 minutes / week</span>
-            <p>Brisk walking, cycling, swimming, rowing. Increases mitochondrial density, lowers resting blood pressure, and improves VO2 max.</p>
-            <div class="fit-tips">
-              <strong>Recommendation:</strong> 30 minutes of brisk walking 5 days per week at moderate intensity (able to talk, but not sing).
-            </div>
-          </div>
-          <div class="fitness-card">
-            <div class="fit-icon"><i data-lucide="dumbbell"></i></div>
-            <h3>2. Progressive Resistance Training</h3>
-            <span class="fit-target">2 - 3 sessions / week</span>
-            <p>Squats, lunges, push-ups, resistance bands, free weights. Preserves lean skeletal muscle mass—the primary tissue for glucose disposal.</p>
-            <div class="fit-tips">
-              <strong>Recommendation:</strong> 8-10 exercises targeting major muscle groups, 2-3 sets of 10-12 repetitions.
-            </div>
-          </div>
-          <div class="fitness-card">
-            <div class="fit-icon"><i data-lucide="activity"></i></div>
-            <h3>3. Post-Meal Glucose Strolls</h3>
-            <span class="fit-target">10 - 15 minutes after meals</span>
-            <p>Walking 10-15 minutes after lunch or dinner stimulates muscular contraction that moves glucose out of the blood without needing insulin!</p>
-            <div class="fit-tips">
-              <strong>Recommendation:</strong> Blunts postprandial glucose spikes by up to 30% in both diabetic and healthy adults.
-            </div>
-          </div>
-          <div class="fitness-card">
-            <div class="fit-icon"><i data-lucide="shield"></i></div>
-            <h3>4. Mobility & Balance Training</h3>
-            <span class="fit-target">2 - 3 times / week</span>
-            <p>Tai Chi, gentle yoga, single-leg stands, joint mobility drills. Crucial to prevent debilitating fall injuries and preserve spinal alignment.</p>
-            <div class="fit-tips">
-              <strong>Recommendation:</strong> Stand on one foot while brushing teeth to build proprioceptive stability.
-            </div>
-          </div>
-        </div>
-
-        <!-- Safe Exercise for Specific Conditions -->
-        <div class="condition-exercise-wrap">
-          <h3 class="subsection-title">Exercise Guidelines for Specific Medical Conditions</h3>
-          <div class="condition-exercise-grid">
-            <div class="cond-fit-card">
-              <h4>Hypertension</h4>
-              <p><strong>Recommended:</strong> Aerobic walking, cycling, isometric handgrip exercises.</p>
-              <p><strong>Caution:</strong> Avoid heavy valsalva straining (holding breath during heavy lifting) which causes acute BP spikes.</p>
-            </div>
-            <div class="cond-fit-card">
-              <h4>Type 2 Diabetes</h4>
-              <p><strong>Recommended:</strong> Combined aerobic and resistance training. Always carry rapid glucose tablets.</p>
-              <p><strong>Caution:</strong> Inspect feet daily for blisters; avoid exercising during acute severe hypoglycemia (< 70 mg/dL).</p>
-            </div>
-            <div class="cond-fit-card">
-              <h4>Joint Osteoarthritis</h4>
-              <p><strong>Recommended:</strong> Low-impact water aerobics, swimming, recumbent cycling, quadriceps strengthening.</p>
-              <p><strong>Caution:</strong> Avoid high-impact jumping or running on hard pavement during active joint flare-ups.</p>
-            </div>
-            <div class="cond-fit-card">
-              <h4>Post-Cardiac Recovery</h4>
-              <p><strong>Recommended:</strong> Clinically supervised Cardiac Rehabilitation walking protocols.</p>
-              <p><strong>Caution:</strong> Never exercise through chest pressure, dizziness, or irregular palpitations.</p>
-            </div>
-          </div>
+      <div class="container py-4">
+        <div class="prevention-cards-grid" id="preventionCardsGrid">
+          <!-- Populated dynamically via JS with 10 simple actionable prevention guides -->
         </div>
       </div>
     </section>
 
-    <!-- ================= PAGE 7: MENTAL HEALTH ================= -->
-    <section id="view-mental-health" class="app-view">
-      <div class="page-hero bg-mental">
+    <!-- ================= 5. HEALTH CALCULATORS VIEW (കാൽക്കുലേറ്ററുകൾ) ================= -->
+    <section id="view-tools" class="app-view">
+      <div class="view-header-strip bg-amber-strip">
         <div class="container">
-          <span class="page-tag">Psychological Wellbeing</span>
-          <h1>Mental Health & Emotional Resilience</h1>
-          <p class="page-desc">Demystifying mental health with scientific compassion. Evidence-based strategies for stress reduction, anxiety management, restorative sleep, and emotional recovery.</p>
+          <span class="sub-chip">ലളിതമായ കാൽക്കുലേറ്ററുകൾ</span>
+          <h1 id="txtToolsPageTitle">ആരോഗ്യ പരിശോധനാ കാൽക്കുലേറ്ററുകൾ</h1>
+          <p id="txtToolsPageDesc">നിങ്ങളുടെ ഉയരം, തൂക്കം, രക്തസമ്മർദ്ദം തുടങ്ങിയവ നൽകി ആരോഗ്യം എളുപ്പത്തിൽ കണക്കാക്കാം. (വിദ്യാഭ്യാസ ആവശ്യങ്ങൾക്ക് മാത്രം)</p>
         </div>
       </div>
 
-      <div class="container py-6">
-        <!-- Crisis Support Emergency Card -->
-        <div class="crisis-helpline-card">
-          <div class="crisis-icon"><i data-lucide="phone-call"></i></div>
-          <div class="crisis-text">
-            <h3>Immediate Crisis & Suicide Prevention Support</h3>
-            <p>If you or someone you care about is experiencing thoughts of self-harm or overwhelming distress, compassionate free help is available 24/7:</p>
-            <div class="crisis-numbers">
-              <span><strong>USA & Canada:</strong> Call or Text <strong>988</strong></span>
-              <span><strong>UK:</strong> Call <strong>111</strong> or <strong>999</strong></span>
-              <span><strong>India:</strong> Call <strong>14416</strong> (Tele-MANAS) or <strong>112</strong></span>
-              <span><strong>International:</strong> Contact your local emergency hospital</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Interactive Mental Health Tools -->
-        <div class="mental-tools-grid">
-          <!-- Box Breathing Widget -->
-          <div class="mental-card">
-            <div class="mental-header">
-              <i data-lucide="wind"></i>
-              <h4>Interactive Box Breathing (4-4-4-4)</h4>
-            </div>
-            <p>Used by emergency responders and mindfulness experts to rapidly down-regulate acute panic and stimulate the parasympathetic vagus nerve.</p>
-            <div class="breathing-circle-container">
-              <div class="breathing-visual" id="breathingVisual">
-                <span id="breathingText">Ready</span>
-              </div>
-            </div>
-            <button class="btn btn-outline-sm btn-block" id="startBreathingBtn">Start 2-Minute Breathing Exercise</button>
-          </div>
-
-          <!-- Sleep Hygiene Protocols -->
-          <div class="mental-card">
-            <div class="mental-header">
-              <i data-lucide="moon"></i>
-              <h4>The 5 Sleep Hygiene Anchors</h4>
-            </div>
-            <ul class="mental-checklist">
-              <li><strong>Same Wake-Up Time:</strong> Fixed wake time every day anchors circadian clock.</li>
-              <li><strong>Morning Sun:</strong> 15 minutes of outdoor sunlight sets the melatonin timer.</li>
-              <li><strong>Caffeine Curfew:</strong> No coffee or energy drinks 8-10 hours before sleep.</li>
-              <li><strong>Cool Room:</strong> 65°F (18°C) temperature facilitates slow-wave sleep.</li>
-              <li><strong>Screen Curfew:</strong> No glowing screens in bed; read a paper book.</li>
-            </ul>
-          </div>
-
-          <!-- CBT Principles -->
-          <div class="mental-card">
-            <div class="mental-header">
-              <i data-lucide="brain"></i>
-              <h4>Cognitive Reframing (CBT)</h4>
-            </div>
-            <p>Notice automatic catastrophic thoughts ("Everything is ruined"). Challenge the thought:</p>
-            <div class="reframing-box">
-              <div class="thought-original">"What is the evidence for this thought?"</div>
-              <div class="thought-reframed">"Is there a more realistic, balanced perspective?"</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PAGE 8: SYMPTOMS CHECKER ================= -->
-    <section id="view-symptom-checker" class="app-view">
-      <div class="page-hero bg-symptom">
-        <div class="container">
-          <span class="page-tag">Clinical Triage Tool</span>
-          <h1>Interactive Symptoms Checker</h1>
-          <p class="page-desc">An educational triage guide to help you understand symptoms, recognize emergency red flags, and prepare structured questions for your doctor.</p>
-        </div>
-      </div>
-
-      <div class="container py-6">
-        <div class="alert-box alert-warning">
-          <i data-lucide="alert-triangle"></i>
-          <div>
-            <strong>Educational Disclaimer:</strong> This symptom checker provides informational triage guidance only. It is NOT a medical diagnosis. If you have severe chest pain, breathing difficulty, or sudden weakness, call 911 / 112 immediately.
-          </div>
-        </div>
-
-        <div class="symptom-wizard-card">
-          <!-- Step 1: Body Area -->
-          <div class="wizard-step" id="stepBodyArea">
-            <h3 class="wizard-title">Step 1: Select the Primary Body Area</h3>
-            <div class="body-areas-grid" id="bodyAreaButtons">
-              <button class="area-btn" data-area="head"><i data-lucide="brain"></i><span>Head & Neurological</span></button>
-              <button class="area-btn" data-area="chest"><i data-lucide="heart"></i><span>Chest & Heart</span></button>
-              <button class="area-btn" data-area="respiratory"><i data-lucide="wind"></i><span>Lungs & Breathing</span></button>
-              <button class="area-btn" data-area="digestive"><i data-lucide="disc"></i><span>Abdomen & Digestion</span></button>
-              <button class="area-btn" data-area="joints"><i data-lucide="shield"></i><span>Bones, Joints & Spine</span></button>
-              <button class="area-btn" data-area="whole"><i data-lucide="thermometer"></i><span>Fever & Whole Body</span></button>
-            </div>
-          </div>
-
-          <!-- Step 2: Symptom Selection -->
-          <div class="wizard-step hidden" id="stepSymptoms">
-            <h3 class="wizard-title">Step 2: Select Specific Symptoms You Are Experiencing</h3>
-            <div class="symptoms-checklist" id="symptomsChecklist">
-              <!-- Injected dynamically based on selected area -->
-            </div>
-            <div class="wizard-nav-row">
-              <button class="btn btn-outline-sm" id="btnBackToArea"><i data-lucide="arrow-left"></i> Back</button>
-              <button class="btn btn-primary" id="btnAnalyzeSymptoms">Analyze Symptoms & Triage <i data-lucide="arrow-right"></i></button>
-            </div>
-          </div>
-
-          <!-- Step 3: Triage Result -->
-          <div class="wizard-step hidden" id="stepTriageResult">
-            <div id="triageResultContent">
-              <!-- Injected dynamically -->
-            </div>
-            <button class="btn btn-outline" id="btnRestartSymptomChecker"><i data-lucide="rotate-ccw"></i> Check New Symptoms</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PAGE 9: HEALTH RISK ASSESSMENT & TOOLS ================= -->
-    <section id="view-risk-assessment" class="app-view">
-      <div class="page-hero bg-tools">
-        <div class="container">
-          <span class="page-tag">Interactive Calculators</span>
-          <h1>Health Risk Assessment & Interactive Tools</h1>
-          <p class="page-desc">Scientific evidence-based clinical calculators to estimate metabolic parameters, body composition, energy expenditure, and cardiovascular risks.</p>
-        </div>
-      </div>
-
-      <div class="container py-6">
-        <!-- Tabs for the 8 Calculators -->
-        <div class="tools-nav-bar" id="toolsNavBar">
-          <button class="tool-tab-btn active" data-tool="bmi"><i data-lucide="scale"></i> BMI Calculator</button>
-          <button class="tool-tab-btn" data-tool="water"><i data-lucide="droplet"></i> Water Intake</button>
-          <button class="tool-tab-btn" data-tool="calories"><i data-lucide="flame"></i> Calorie / TDEE</button>
-          <button class="tool-tab-btn" data-tool="steps"><i data-lucide="footprints"></i> Step Goal</button>
-          <button class="tool-tab-btn" data-tool="lifestyle"><i data-lucide="award"></i> Lifestyle Score</button>
-          <button class="tool-tab-btn" data-tool="diabetes"><i data-lucide="activity"></i> Diabetes Screener</button>
-          <button class="tool-tab-btn" data-tool="bp"><i data-lucide="heart"></i> BP Category Guide</button>
-        </div>
-
-        <div class="calculator-container" id="calculatorContainer">
+      <div class="container py-4">
+        <div class="tools-grid-layout">
           
           <!-- 1. BMI Calculator -->
-          <div class="calc-panel active" id="calc-bmi">
-            <div class="calc-header">
-              <h2>BMI & Body Composition Calculator</h2>
-              <p>Calculates Body Mass Index (weight in kg / height in meters squared) according to WHO and Asian-specific cut-offs.</p>
+          <div class="simple-calc-card">
+            <div class="calc-card-head">
+              <span class="calc-ico">⚖️</span>
+              <h3>ബി.എം.ഐ കാൽക്കുലേറ്റർ (BMI Check)</h3>
             </div>
-            <div class="calc-form-grid">
-              <div class="form-group">
-                <label>Unit System</label>
-                <select id="bmiUnitSelect">
-                  <option value="metric">Metric (kg / cm)</option>
-                  <option value="imperial">Imperial (lbs / feet-inches)</option>
-                </select>
+            <p class="calc-sub">ഉയരത്തിന് അനുസരിച്ചുള്ള തൂക്കമുണ്ടോ എന്ന് പരിശോധിക്കുക.</p>
+            <div class="calc-inputs-row">
+              <div class="c-input">
+                <label>ഉയരം (cm)</label>
+                <input type="number" id="calcBmiHeight" placeholder="e.g. 170">
               </div>
-              <div class="form-group" id="bmiMetricWeight">
-                <label>Weight (kg)</label>
-                <input type="number" id="bmiWeightKg" placeholder="e.g. 70" min="20" max="300" step="0.5">
-              </div>
-              <div class="form-group" id="bmiMetricHeight">
-                <label>Height (cm)</label>
-                <input type="number" id="bmiHeightCm" placeholder="e.g. 175" min="50" max="250">
-              </div>
-              <div class="form-group hidden" id="bmiImperialWeight">
-                <label>Weight (lbs)</label>
-                <input type="number" id="bmiWeightLbs" placeholder="e.g. 154" min="40" max="600">
-              </div>
-              <div class="form-group hidden" id="bmiImperialHeight">
-                <label>Height (Feet & Inches)</label>
-                <div class="two-inputs">
-                  <input type="number" id="bmiHeightFeet" placeholder="Feet" min="2" max="8">
-                  <input type="number" id="bmiHeightInches" placeholder="Inches" min="0" max="11">
-                </div>
+              <div class="c-input">
+                <label>തൂക്കം (kg)</label>
+                <input type="number" id="calcBmiWeight" placeholder="e.g. 70">
               </div>
             </div>
-            <button class="btn btn-primary" id="btnCalcBMI">Calculate BMI</button>
-            <div class="calc-result-box hidden" id="bmiResultBox"></div>
+            <button class="btn-calc" id="btnRunBmiCalc">കണക്കാക്കുക</button>
+            <div id="resultBmiCard" class="calc-result-display hidden"></div>
           </div>
 
-          <!-- 2. Water Intake Estimator -->
-          <div class="calc-panel" id="calc-water">
-            <div class="calc-header">
-              <h2>Daily Water Intake Estimator</h2>
-              <p>Estimates daily fluid requirements adjusted for body weight, physical activity level, and climate.</p>
+          <!-- 2. Water Intake Calculator -->
+          <div class="simple-calc-card">
+            <div class="calc-card-head">
+              <span class="calc-ico">💧</span>
+              <h3>വെള്ളം കുടിക്കേണ്ട അളവ് (Water Intake)</h3>
             </div>
-            <div class="calc-form-grid">
-              <div class="form-group">
-                <label>Weight (kg)</label>
-                <input type="number" id="waterWeight" placeholder="e.g. 68" min="30" max="250">
+            <p class="calc-sub">ദിവസവും എത്ര ലിറ്റർ വെള്ളം കുടിക്കണമെന്ന് അറിയാം.</p>
+            <div class="calc-inputs-row">
+              <div class="c-input">
+                <label>തൂക്കം (kg)</label>
+                <input type="number" id="calcWaterWeight" placeholder="e.g. 65">
               </div>
-              <div class="form-group">
-                <label>Daily Physical Activity</label>
-                <select id="waterActivity">
-                  <option value="sedentary">Sedentary (mostly sitting)</option>
-                  <option value="moderate">Moderate exercise (30-45 mins/day)</option>
-                  <option value="active">Very Active (intense workouts / outdoor labor)</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Climate / Temperature</label>
-                <select id="waterClimate">
-                  <option value="temperate">Temperate / Air-conditioned</option>
-                  <option value="hot">Hot, Tropical, or Humid</option>
+              <div class="c-input">
+                <label>ജോലി / വ്യായാമം</label>
+                <select id="calcWaterActivity">
+                  <option value="low">സാധാരണ ഇരിപ്പ് ജോലി</option>
+                  <option value="moderate" selected>മിതമായ അധ്വാനം / നടത്തം</option>
+                  <option value="heavy">കഠിനമായ അധ്വാനം / വ്യായാമം</option>
                 </select>
               </div>
             </div>
-            <button class="btn btn-primary" id="btnCalcWater">Estimate Water Need</button>
-            <div class="calc-result-box hidden" id="waterResultBox"></div>
+            <button class="btn-calc" id="btnRunWaterCalc">കണക്കാക്കുക</button>
+            <div id="resultWaterCard" class="calc-result-display hidden"></div>
           </div>
 
-          <!-- 3. Calorie & TDEE Calculator -->
-          <div class="calc-panel" id="calc-calories">
-            <div class="calc-header">
-              <h2>Calorie & Energy Expenditure Calculator (BMR & TDEE)</h2>
-              <p>Calculates Basal Metabolic Rate using the validated Mifflin-St Jeor equation and Total Daily Energy Expenditure.</p>
+          <!-- 3. Blood Pressure Checker -->
+          <div class="simple-calc-card">
+            <div class="calc-card-head">
+              <span class="calc-ico">💓</span>
+              <h3>രക്തസമ്മർദ്ദം അറിയാം (BP Checker)</h3>
             </div>
-            <div class="calc-form-grid">
-              <div class="form-group">
-                <label>Biological Sex</label>
-                <select id="calSex">
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
+            <p class="calc-sub">നിങ്ങളുടെ BP നോർമൽ ആണോ എന്ന് വിലയിരുത്തുക.</p>
+            <div class="calc-inputs-row">
+              <div class="c-input">
+                <label>സിസ്റ്റോളിക് (മുകളിലെ സംഖ്യ)</label>
+                <input type="number" id="calcBpSys" placeholder="e.g. 120">
               </div>
-              <div class="form-group">
-                <label>Age (years)</label>
-                <input type="number" id="calAge" placeholder="e.g. 35" min="15" max="100">
-              </div>
-              <div class="form-group">
-                <label>Weight (kg)</label>
-                <input type="number" id="calWeight" placeholder="e.g. 72" min="30" max="250">
-              </div>
-              <div class="form-group">
-                <label>Height (cm)</label>
-                <input type="number" id="calHeight" placeholder="e.g. 172" min="100" max="250">
-              </div>
-              <div class="form-group">
-                <label>Activity Multiplier</label>
-                <select id="calActivity">
-                  <option value="1.2">Sedentary (Little or no exercise)</option>
-                  <option value="1.375">Lightly Active (Light exercise 1-3 days/week)</option>
-                  <option value="1.55">Moderately Active (Moderate exercise 3-5 days/week)</option>
-                  <option value="1.725">Very Active (Hard exercise 6-7 days/week)</option>
-                </select>
+              <div class="c-input">
+                <label>ഡയസ്റ്റോളിക് (താഴത്തെ സംഖ്യ)</label>
+                <input type="number" id="calcBpDia" placeholder="e.g. 80">
               </div>
             </div>
-            <button class="btn btn-primary" id="btnCalcCalories">Calculate Energy Targets</button>
-            <div class="calc-result-box hidden" id="calResultBox"></div>
+            <button class="btn-calc" id="btnRunBpCalc">പരിശോധിക്കുക</button>
+            <div id="resultBpCard" class="calc-result-display hidden"></div>
           </div>
 
-          <!-- 4. Step Goal Tracker -->
-          <div class="calc-panel" id="calc-steps">
-            <div class="calc-header">
-              <h2>Daily Step Goal & Activity Converter</h2>
-              <p>Track distance, approximate caloric burn, and cardiovascular risk reduction based on your daily step count.</p>
+          <!-- 4. Diabetes Risk Check -->
+          <div class="simple-calc-card">
+            <div class="calc-card-head">
+              <span class="calc-ico">🩸</span>
+              <h3>പ്രമേഹ സാധ്യത പരിശോധന (Diabetes Risk)</h3>
             </div>
-            <div class="calc-form-grid">
-              <div class="form-group">
-                <label>Average Daily Steps</label>
-                <input type="number" id="stepCountInput" placeholder="e.g. 8000" min="500" max="50000" step="500">
-              </div>
-              <div class="form-group">
-                <label>Estimated Weight (kg)</label>
-                <input type="number" id="stepWeightInput" placeholder="e.g. 70" min="30" max="250">
-              </div>
+            <p class="calc-sub">നിങ്ങൾക്ക് ഭാവിയിൽ പ്രമേഹം വരാൻ സാധ്യതയുണ്ടോ?</p>
+            <div class="risk-mini-questions" id="diabetesMiniQuestions">
+              <!-- Rendered via JS -->
             </div>
-            <button class="btn btn-primary" id="btnCalcSteps">Analyze Step Impact</button>
-            <div class="calc-result-box hidden" id="stepResultBox"></div>
-          </div>
-
-          <!-- 5. Healthy Lifestyle Assessment -->
-          <div class="calc-panel" id="calc-lifestyle">
-            <div class="calc-header">
-              <h2>Healthy Lifestyle Assessment Score (0 - 100)</h2>
-              <p>Answer 8 quick questions across nutrition, activity, sleep, and habits to receive your overall preventive health score.</p>
-            </div>
-            <div class="lifestyle-questions-grid" id="lifestyleQuestions">
-              <!-- Populated via JavaScript -->
-            </div>
-            <button class="btn btn-primary mt-4" id="btnCalcLifestyle">Calculate Lifestyle Score</button>
-            <div class="calc-result-box hidden" id="lifestyleResultBox"></div>
-          </div>
-
-          <!-- 6. Diabetes Risk Screener -->
-          <div class="calc-panel" id="calc-diabetes">
-            <div class="calc-header">
-              <h2>Type 2 Diabetes Risk Awareness Questionnaire</h2>
-              <p>Adapted from the clinically validated Finnish Diabetes Risk Score (FINDRISC) and American Diabetes Association models.</p>
-            </div>
-            <div class="diabetes-questions-grid" id="diabetesQuestions">
-              <!-- Populated via JavaScript -->
-            </div>
-            <button class="btn btn-primary mt-4" id="btnCalcDiabetes">Assess Diabetes Risk</button>
-            <div class="calc-result-box hidden" id="diabetesResultBox"></div>
-          </div>
-
-          <!-- 7. Blood Pressure Guide -->
-          <div class="calc-panel" id="calc-bp">
-            <div class="calc-header">
-              <h2>Blood Pressure Category Guide & Checker</h2>
-              <p>Enter your resting systolic and diastolic readings to determine your AHA/ACC cardiovascular blood pressure category.</p>
-            </div>
-            <div class="calc-form-grid">
-              <div class="form-group">
-                <label>Systolic Pressure (Top Number, mmHg)</label>
-                <input type="number" id="bpSystolic" placeholder="e.g. 124" min="60" max="250">
-              </div>
-              <div class="form-group">
-                <label>Diastolic Pressure (Bottom Number, mmHg)</label>
-                <input type="number" id="bpDiastolic" placeholder="e.g. 82" min="40" max="150">
-              </div>
-            </div>
-            <button class="btn btn-primary" id="btnCalcBP">Evaluate Blood Pressure</button>
-            <div class="calc-result-box hidden" id="bpResultBox"></div>
+            <button class="btn-calc" id="btnRunDiabetesRisk">സാധ്യത പരിശോധിക്കുക</button>
+            <div id="resultDiabetesRiskCard" class="calc-result-display hidden"></div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ================= PAGE 10: ARTICLES & BLOGS ================= -->
-    <section id="view-articles" class="app-view">
-      <div class="page-hero bg-articles">
+    <!-- ================= 6. HELP & ABOUT VIEW (സഹായം) ================= -->
+    <section id="view-help" class="app-view">
+      <div class="view-header-strip bg-blue-strip">
         <div class="container">
-          <span class="page-tag">Peer-Reviewed Health Literacy</span>
-          <h1>Health Articles, Research & Clinical Blogs</h1>
-          <p class="page-desc">In-depth medical essays on metabolic biochemistry, arterial physiology, gut neurobiology, cancer screenings, and sleep science.</p>
+          <span class="sub-chip">സഹായവും വിവരങ്ങളും</span>
+          <h1 id="txtHelpPageTitle">സഹായം & അടിയന്തിര നിർദ്ദേശങ്ങൾ</h1>
+          <p id="txtHelpPageDesc">ഈ വെബ്‌സൈറ്റിന്റെ ഉപയോഗവും അടിയന്തിര ഘട്ടങ്ങളിൽ ശ്രദ്ധിക്കേണ്ട കാര്യങ്ങളും.</p>
         </div>
       </div>
 
-      <div class="container py-6">
-        <div class="articles-grid" id="allArticlesGrid">
-          <!-- Populated dynamically via JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PAGE 11: ABOUT US ================= -->
-    <section id="view-about" class="app-view">
-      <div class="page-hero bg-about">
-        <div class="container">
-          <span class="page-tag">Our Ethical Mission</span>
-          <h1>About HEALTHCARE FOR YOU</h1>
-          <p class="page-desc">Empowering individuals and families worldwide with transparent, accessible, evidence-based disease prevention education.</p>
-        </div>
-      </div>
-
-      <div class="container py-6">
-        <div class="about-grid">
-          <div class="about-main-text">
-            <h2>The Healthcare Education Gap</h2>
-            <p>Modern medicine has made extraordinary advances in treating acute disease emergencies. Yet, across the globe, chronic lifestyle-driven illnesses—including Type 2 diabetes, coronary artery disease, hypertension, fatty liver disease, and cancer—continue to escalate at an unprecedented pace.</p>
-            <p>Most individuals only encounter medical information after receiving an irreversible diagnosis in a hurried clinic visit. <strong>HEALTHCARE FOR YOU</strong> was founded to bridge this gap: providing authoritative, deeply researched medical knowledge <em>before</em> illness strikes.</p>
-            
-            <h3>Our Editorial Governance & Core Principles</h3>
-            <ul class="principles-list">
-              <li><strong>Zero Pharmaceutical Sponsorship:</strong> We accept no funding, advertisements, or kickbacks from pharmaceutical manufacturers or supplement companies.</li>
-              <li><strong>Gold-Standard Reference Sources:</strong> All clinical content is grounded strictly in published guidelines from the World Health Organization (WHO), Centers for Disease Control and Prevention (CDC), National Health Service (NHS), American Heart Association (AHA), and American Diabetes Association (ADA).</li>
-              <li><strong>Plain Language, Uncompromised Science:</strong> We translate complex cellular biochemistry and clinical trials into clear, practical, dignified language that anyone can understand and put into daily practice.</li>
-              <li><strong>No False Cure Claims:</strong> We never promise miracle cures, secret detoxes, or unproven herbal panaceas. We clearly distinguish prevention from treatment.</li>
-            </ul>
-          </div>
-          <div class="about-sidebar">
-            <div class="board-card">
-              <h3>Medical Advisory & Ethics Board</h3>
-              <p>Our educational content is authored and reviewed by multidisciplinary clinicians across cardiology, endocrinology, oncology, gastroenterology, and public health.</p>
-              <div class="reviewer-item">
-                <div class="rev-avatar">RV</div>
-                <div>
-                  <strong>Dr. Rachel Varghese, MD</strong>
-                  <span>Endocrinology & Metabolic Disease</span>
-                </div>
-              </div>
-              <div class="reviewer-item">
-                <div class="rev-avatar">AM</div>
-                <div>
-                  <strong>Dr. Anand Menon, MD, DM</strong>
-                  <span>Cardiology & Vascular Medicine</span>
-                </div>
-              </div>
-              <div class="reviewer-item">
-                <div class="rev-avatar">SC</div>
-                <div>
-                  <strong>Dr. Suresh Chandran, MD</strong>
-                  <span>Surgical Oncology</span>
-                </div>
-              </div>
-              <div class="reviewer-item">
-                <div class="rev-avatar">ET</div>
-                <div>
-                  <strong>Dr. Elizabeth Thomas, MD</strong>
-                  <span>Neurology & Sleep Medicine</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PAGE 12: CONTACT US ================= -->
-    <section id="view-contact" class="app-view">
-      <div class="page-hero bg-contact">
-        <div class="container">
-          <span class="page-tag">Get in Touch</span>
-          <h1>Contact Us & Editorial Inquiries</h1>
-          <p class="page-desc">Have a question, feedback on clinical accuracy, or partnership inquiry? Reach out to our medical information and digital education team.</p>
-        </div>
-      </div>
-
-      <div class="container py-6">
-        <div class="contact-layout-grid">
-          <div class="contact-form-card">
-            <h2>Send a Message to Our Medical Board</h2>
-            <form id="contactForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <label>Full Name *</label>
-                  <input type="text" id="contactName" required placeholder="Dr. / Mr. / Ms. Your Name">
-                </div>
-                <div class="form-group">
-                  <label>Email Address *</label>
-                  <input type="email" id="contactEmail" required placeholder="yourname@example.com">
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Inquiry Category *</label>
-                <select id="contactCategory" required>
-                  <option value="general">General Educational Question</option>
-                  <option value="correction">Clinical Content Correction or Feedback</option>
-                  <option value="translation">Language & Translation Feedback</option>
-                  <option value="partnership">Academic / Institutional Partnership</option>
-                  <option value="technical">Website Technical Issue</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Subject *</label>
-                <input type="text" id="contactSubject" required placeholder="Brief subject summary">
-              </div>
-              <div class="form-group">
-                <label>Message *</label>
-                <textarea id="contactMessage" rows="5" required placeholder="Please provide detailed feedback or inquiries..."></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" id="btnSubmitContact">
-                <i data-lucide="send"></i> Send Message
-              </button>
-            </form>
-            <div id="contactToast" class="toast-box hidden"></div>
-          </div>
-
-          <div class="contact-info-card">
-            <h3>Digital Headquarters & Support</h3>
-            <div class="info-item">
-              <i data-lucide="mail"></i>
-              <div>
-                <strong>Email Inquiries:</strong>
-                <p>editorial@healthcareforyou.org</p>
-              </div>
-            </div>
-            <div class="info-item">
-              <i data-lucide="clock"></i>
-              <div>
-                <strong>Editorial Desk Hours:</strong>
-                <p>Monday – Friday, 8:00 AM – 6:00 PM (GMT)</p>
-              </div>
-            </div>
-            <div class="info-item">
-              <i data-lucide="shield-alert"></i>
-              <div>
-                <strong>Note on Personal Medical Advice:</strong>
-                <p>By medical ethics regulations, our team cannot provide individual patient diagnoses or prescribe medications online. Always consult your personal physician for clinical treatment.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= PAGE 13: MEDICAL DISCLAIMER ================= -->
-    <section id="view-disclaimer" class="app-view">
-      <div class="page-hero bg-disclaimer">
-        <div class="container">
-          <span class="page-tag">Legal & Clinical Ethics</span>
-          <h1>Comprehensive Medical Disclaimer</h1>
-          <p class="page-desc">Please read this official medical, legal, and educational disclaimer carefully before utilizing any tools, guides, or calculators on this website.</p>
-        </div>
-      </div>
-
-      <div class="container py-6">
-        <div class="disclaimer-document-card">
-          <div class="doc-badge"><i data-lucide="shield-check"></i> Official Medical Ethics Statement (Section 12 Compliance)</div>
+      <div class="container py-4">
+        <div class="help-layout-grid">
           
-          <h2>1. Educational Purpose Only</h2>
-          <p>The content, articles, calculators, symptom checker, diet guides, exercise protocols, and disease profiles provided on <strong>HEALTHCARE FOR YOU</strong> are created exclusively for general informational, educational, and public health awareness purposes. Under no circumstances should any material on this website be construed as, or substituted for, professional medical advice, clinical diagnosis, or medical treatment.</p>
+          <!-- Emergency Warning Box -->
+          <div class="help-card card-alert">
+            <div class="help-card-head">
+              <span class="alert-badge">🚨 അടിയന്തിര ഘട്ടങ്ങൾ</span>
+              <h3>എപ്പോഴാണ് ഉടൻ ആശുപത്രിയിൽ പോകേണ്ടത്?</h3>
+            </div>
+            <ul class="help-bullets">
+              <li>കഠിനമായ നെഞ്ചുവേദന, നെഞ്ചിൽ ഭാരം, വേദന കൈകളിലേക്കോ താടിയിലേക്കോ പടരുക.</li>
+              <li>പെട്ടെന്നുള്ള കടുത്ത ശ്വാസതടസ്സം.</li>
+              <li>മുഖം ഒരു വശത്തേക്ക് കോടിപ്പോവുക, കൈ കാലുകൾക്ക് പെട്ടെന്ന് തളർച്ച, സംസാരിക്കാൻ ബുദ്ധിമുട്ട് (സ്ട്രോക്ക് ലക്ഷണങ്ങൾ).</li>
+              <li>രക്തം ഛർദ്ദിക്കുകയോ മലത്തിൽ കറുത്ത രക്തം പോവുകയോ ചെയ്യുക.</li>
+              <li>കടുത്ത അസ്ഥി ഒടിവ് അല്ലെങ്കിൽ അസഹ്യമായ വേദന.</li>
+            </ul>
+            <p class="emergency-call-text">ഇത്തരം ലക്ഷണങ്ങൾ കണ്ടാൽ ഒട്ടും വൈകാതെ <strong>112</strong> അല്ലെങ്കിൽ അടുത്തുള്ള ആശുപത്രി അടിയന്തിര വിഭാഗത്തിലേക്ക് വിളിക്കുക.</p>
+          </div>
 
-          <h2>2. No Doctor-Patient Relationship</h2>
-          <p>Viewing this website, utilizing our health tools, or contacting our editorial team does NOT create a doctor-patient relationship. Always seek the advice of your qualified personal physician or licensed healthcare provider with any questions you may have regarding a medical condition or treatment plan.</p>
+          <!-- About Project -->
+          <div class="help-card">
+            <h3>HEALTHCARE FOR YOU - ലക്ഷ്യം</h3>
+            <p>സാധാരണക്കാർക്ക് രോഗങ്ങളെക്കുറിച്ചും അവയുടെ പ്രതിരോധത്തെക്കുറിച്ചും ലളിതമായ ഭാഷയിൽ അറിവ് പകരുക എന്നതാണ് ഈ സംരംഭത്തിന്റെ പ്രധാന ലക്ഷ്യം.</p>
+            <p>ലോകാരോഗ്യ സംഘടന (WHO), CDC, NHS തുടങ്ങിയ ഔദ്യോഗിക മെഡിക്കൽ മാർഗ്ഗരേഖകളെ അടിസ്ഥാനമാക്കിയാണ് വിവരങ്ങൾ തയ്യാറാക്കിയിട്ടുള്ളത്.</p>
+            
+            <h4 style="margin-top:1.25rem;">മെഡിക്കൽ നിരാകരണം (Disclaimer):</h4>
+            <p style="font-size:0.85rem; color:var(--text-muted);">
+              ഈ വെബ്‌സൈറ്റിലെ വിവരങ്ങൾ ആരോഗ്യ അവബോധത്തിന് വേണ്ടിയുള്ളതാണ്. ഇത് ഒരു ഡോക്ടറുടെ നേരിട്ടുള്ള പരിശോധനയ്ക്കോ ചികിത്സയ്ക്കോ പകരമല്ല. അസുഖങ്ങൾക്ക് ഡോക്ടറെ നേരിട്ട് കണ്ട് പരിശോധന നടത്തുക. കഴിക്കുന്ന മരുന്നുകൾ ഡോക്ടറുടെ നിർദ്ദേശമില്ലാതെ നിർത്തരുത്.
+            </p>
+          </div>
 
-          <h2>3. Never Discontinue Prescribed Medications</h2>
-          <p>Never disregard professional medical advice or delay in seeking it because of something you have read on this website. Never stop, start, or alter the dosage of any prescribed pharmaceutical medication (such as antihypertensives, insulin, statins, thyroid hormones, or anti-seizure medications) without the explicit supervision and instruction of your prescribing doctor.</p>
+          <!-- Contact Box -->
+          <div class="help-card" style="grid-column: 1 / -1;">
+            <h3>ഞങ്ങളുമായി ബന്ധപ്പെടുക (Contact)</h3>
+            <p>സംശയങ്ങളോ അഭിപ്രായങ്ങളോ ഉണ്ടെങ്കിൽ താഴെ സന്ദേശം അയക്കാം:</p>
+            <form id="simpleContactForm" class="simple-contact-form">
+              <div class="s-form-row">
+                <input type="text" id="sContactName" placeholder="നിങ്ങളുടെ പേര് (Name)" required>
+                <input type="email" id="sContactEmail" placeholder="ഇമെയിൽ (Email)" required>
+              </div>
+              <textarea id="sContactMessage" rows="3" placeholder="സന്ദേശം രേഖപ്പെടുത്തുക (Message)..." required></textarea>
+              <button type="submit" class="btn-calc" style="max-width:200px;">സന്ദേശം അയക്കുക</button>
+            </form>
+            <div id="simpleContactToast" class="contact-toast hidden"></div>
+          </div>
 
-          <h2>4. Emergency Medical Situations</h2>
-          <p>If you believe you may have a medical emergency, CALL EMERGENCY SERVICES (911 in the US/Canada, 112 in Europe and India, 999 in the UK) OR GO TO THE NEAREST EMERGENCY ROOM IMMEDIATELY. Do not attempt to rely on this website or wait for an email response in acute situations such as:</p>
-          <ul>
-            <li>Sudden, severe, crushing chest pain, pressure, or tightness radiating to the arm, neck, or jaw</li>
-            <li>Sudden shortness of breath or difficulty breathing</li>
-            <li>Sudden weakness or numbness of the face, arm, or leg (especially on one side of the body)</li>
-            <li>Sudden difficulty speaking, confusion, or severe thunderclap headache</li>
-            <li>Coughing up blood or vomiting blood</li>
-            <li>Thoughts of self-harm or suicide</li>
-          </ul>
-
-          <h2>5. Nutritional and Lifestyle Guidance</h2>
-          <p>No food, superfood, beverage, or lifestyle habit presented on this platform is claimed or guaranteed to prevent or cure any disease. Individual metabolic responses to dietary protocols vary depending on genetics, medications, and underlying medical status. Those with chronic renal disease, heart failure, or diabetes must coordinate dietary changes with a certified renal or diabetes clinical dietitian.</p>
-
-          <h2>6. Limitation of Liability</h2>
-          <p>The publishers, authors, contributors, and medical advisory board of <strong>HEALTHCARE FOR YOU</strong> make every effort to maintain accurate, evidence-based content referenced from recognized institutions (WHO, CDC, NHS, Mayo Clinic). However, we make no warranties regarding the absolute completeness, currency, or accuracy of the information, and accept no liability for any injuries, losses, or damages arising from the use of this website.</p>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ================= INDIVIDUAL DISEASE DETAIL MODAL / DRAWER (17 SECTIONS) ================= -->
-  <div class="disease-modal-overlay" id="diseaseModalOverlay">
-    <div class="disease-modal-content" id="diseaseModalContent">
+  <!-- ================= SIMPLIFIED DISEASE DETAIL MODAL (ലളിതമായ രോഗ വിവരണം) ================= -->
+  <div class="disease-simple-modal-overlay" id="diseaseModalOverlay">
+    <div class="disease-simple-modal-card" id="diseaseModalContent">
       
-      <!-- Modal Sticky Header -->
-      <div class="modal-header">
-        <div class="modal-header-left">
-          <span class="modal-category-badge" id="mBadgeCategory">Category</span>
-          <span class="modal-severity-badge" id="mBadgeSeverity">Badge</span>
-          <h2 class="modal-disease-title" id="mDiseaseTitle">Disease Name</h2>
-          <span class="modal-subtitle-i18n" id="mDiseaseSubI18n">Translations</span>
+      <!-- Modal Top Bar -->
+      <div class="d-modal-top">
+        <div class="d-modal-badge-group">
+          <span class="d-modal-cat" id="mBadgeCategory">വിഭാഗം</span>
+          <span class="d-modal-badge" id="mBadgeSeverity">പ്രധാനം</span>
         </div>
-        <div class="modal-header-right">
-          <button class="btn btn-outline-sm" id="btnModalPrint" title="Print Medical Guide">
-            <i data-lucide="printer"></i> Print
+        <div class="d-modal-titles">
+          <h2 class="d-modal-title" id="mDiseaseTitle">രോഗത്തിന്റെ പേര്</h2>
+          <span class="d-modal-eng" id="mDiseaseEngName">Disease English Name</span>
+        </div>
+        <div class="d-modal-actions">
+          <button class="btn-modal-print" id="btnModalPrint" title="പ്രിന്റ് ചെയ്യുക">
+            <i data-lucide="printer"></i> പ്രിന്റ്
           </button>
-          <button class="btn-close-modal" id="btnCloseDiseaseModal" title="Close">
+          <button class="btn-modal-close" id="btnCloseDiseaseModal" title="അടയ്ക്കുക">
             <i data-lucide="x"></i>
           </button>
         </div>
       </div>
 
-      <!-- Quick Nav Anchor Strip for all 17 sections -->
-      <div class="modal-anchor-strip">
-        <a href="#secOverview" class="m-anchor active">Overview</a>
-        <a href="#secCauses" class="m-anchor">Causes</a>
-        <a href="#secSymptoms" class="m-anchor">Symptoms</a>
-        <a href="#secEarlySigns" class="m-anchor">Warning Signs</a>
-        <a href="#secRiskFactors" class="m-anchor">Risk Factors</a>
-        <a href="#secBodyImpact" class="m-anchor">Body Impact</a>
-        <a href="#secDiagnosis" class="m-anchor">Diagnosis</a>
-        <a href="#secTreatment" class="m-anchor">Treatment</a>
-        <a href="#secPrevention" class="m-anchor">Prevention</a>
-        <a href="#secFoods" class="m-anchor">Dietary Habits</a>
-        <a href="#secExercises" class="m-anchor">Exercises</a>
-        <a href="#secLifestyle" class="m-anchor">Lifestyle</a>
-        <a href="#secConsult" class="m-anchor">When to Consult</a>
-        <a href="#secFAQs" class="m-anchor">FAQs</a>
-        <a href="#secReferences" class="m-anchor">References</a>
+      <!-- Clean Modal Navigation Tabs -->
+      <div class="d-modal-tabs-nav" id="modalTabsNav">
+        <button class="d-tab-btn active" data-tab="overview">📖 ലളിതമായ വിവരണം</button>
+        <button class="d-tab-btn" data-tab="symptoms">⚠️ ലക്ഷണങ്ങൾ</button>
+        <button class="d-tab-btn" data-tab="diet">🥗 ഭക്ഷണക്രമം (ഭക്ഷണം)</button>
+        <button class="d-tab-btn" data-tab="habits">🏃 വ്യായാമവും ശീലങ്ങളും</button>
+        <button class="d-tab-btn" data-tab="treatment">💊 പരിഹാരങ്ങളും ചികിത്സയും</button>
+        <button class="d-tab-btn" data-tab="doctor">🩺 ഡോക്ടറെ കാണേണ്ടപ്പോൾ</button>
       </div>
 
-      <!-- Modal Body (The 17 Detailed Clinical Sections) -->
-      <div class="modal-body-scroll" id="mModalBody">
+      <!-- Tab Content Panels -->
+      <div class="d-modal-scroll-body">
         
-        <!-- Section 1 & 2: Overview & What is it -->
-        <div class="m-section" id="secOverview">
-          <div class="m-section-heading"><i data-lucide="book-open"></i> 1. Overview & Definition</div>
-          <div class="lead-box" id="mShortDesc"></div>
-          <h4>What is this disease?</h4>
-          <p id="mWhatIsIt"></p>
-        </div>
-
-        <!-- Section 3: Causes -->
-        <div class="m-section" id="secCauses">
-          <div class="m-section-heading"><i data-lucide="alert-circle"></i> 2. Main Causes & Etiology</div>
-          <ul class="m-bullets" id="mCausesList"></ul>
-        </div>
-
-        <!-- Section 4: Symptoms -->
-        <div class="m-section" id="secSymptoms">
-          <div class="m-section-heading"><i data-lucide="activity"></i> 3. Common Symptoms</div>
-          <ul class="m-bullets" id="mSymptomsList"></ul>
-        </div>
-
-        <!-- Section 5: Early Warning Signs -->
-        <div class="m-section" id="secEarlySigns">
-          <div class="m-section-heading text-danger"><i data-lucide="alert-triangle"></i> 4. Early Warning Signs & Red Flags</div>
-          <div class="alert-box alert-danger">
-            <ul class="m-bullets" id="mWarningSignsList"></ul>
+        <!-- Tab 1: Overview -->
+        <div class="d-tab-panel active" id="tab-overview">
+          <div class="simple-info-banner" id="mShortDesc">
+            ലളിതമായ ഒരു വരി വിവരണം.
+          </div>
+          <div class="simple-text-block">
+            <h4>എന്താണ് ഈ രോഗം? (What is it?)</h4>
+            <p id="mWhatIsIt">രോഗത്തെക്കുറിച്ചുള്ള ലളിതമായ വിവരണം.</p>
+          </div>
+          <div class="simple-text-block">
+            <h4>പ്രധാന കാരണങ്ങൾ (Main Causes):</h4>
+            <ul class="simple-check-list" id="mCausesList"></ul>
           </div>
         </div>
 
-        <!-- Section 6: Risk Factors -->
-        <div class="m-section" id="secRiskFactors">
-          <div class="m-section-heading"><i data-lucide="user-x"></i> 5. Risk Factors & Vulnerabilities</div>
-          <ul class="m-bullets" id="mRiskFactorsList"></ul>
+        <!-- Tab 2: Symptoms -->
+        <div class="d-tab-panel" id="tab-symptoms">
+          <div class="simple-text-block">
+            <h4>സാധാരണ ലക്ഷണങ്ങൾ (Common Symptoms):</h4>
+            <ul class="simple-check-list" id="mSymptomsList"></ul>
+          </div>
+          <div class="simple-alert-block">
+            <h4>🚨 അപകടസൂചനകൾ (Emergency Warning Signs):</h4>
+            <ul class="simple-alert-list" id="mWarningSignsList"></ul>
+          </div>
         </div>
 
-        <!-- Section 7: Body Impact -->
-        <div class="m-section" id="secBodyImpact">
-          <div class="m-section-heading"><i data-lucide="layers"></i> 6. How the Disease Affects the Body</div>
-          <p id="mBodyImpact"></p>
-        </div>
-
-        <!-- Section 8: Diagnosis -->
-        <div class="m-section" id="secDiagnosis">
-          <div class="m-section-heading"><i data-lucide="clipboard-check"></i> 7. How Doctors Diagnose It</div>
-          <ul class="m-bullets" id="mDiagnosisList"></ul>
-        </div>
-
-        <!-- Section 9: Treatment Options -->
-        <div class="m-section" id="secTreatment">
-          <div class="m-section-heading"><i data-lucide="shield"></i> 8. Available Treatment Options</div>
-          <ul class="m-bullets" id="mTreatmentsList"></ul>
-        </div>
-
-        <!-- Section 10: Prevention Methods -->
-        <div class="m-section" id="secPrevention">
-          <div class="m-section-heading"><i data-lucide="shield-check"></i> 9. Evidence-Based Prevention Methods</div>
-          <p id="mPreventionText"></p>
-        </div>
-
-        <!-- Section 11 & 12: Recommended Foods vs Avoid Foods -->
-        <div class="m-section" id="secFoods">
-          <div class="m-section-heading"><i data-lucide="apple"></i> 10. Recommended Dietary Habits & Foods to Avoid</div>
-          <div class="foods-split-grid">
-            <div class="food-column safe">
-              <h5 class="col-title text-green"><i data-lucide="check"></i> Recommended Foods</h5>
-              <ul class="m-bullets" id="mSafeFoodsList"></ul>
+        <!-- Tab 3: Diet & Food -->
+        <div class="d-tab-panel" id="tab-diet">
+          <div class="diet-split-container">
+            <div class="diet-box-green">
+              <h4>🟢 കഴിക്കേണ്ടവ (What to Eat):</h4>
+              <ul class="green-bullets" id="mSafeFoodsList"></ul>
             </div>
-            <div class="food-column avoid">
-              <h5 class="col-title text-red"><i data-lucide="x"></i> Foods to Limit or Avoid</h5>
-              <ul class="m-bullets" id="mAvoidFoodsList"></ul>
+            <div class="diet-box-red">
+              <h4>🔴 ഒഴിവാക്കേണ്ടവ (Foods to Avoid):</h4>
+              <ul class="red-bullets" id="mAvoidFoodsList"></ul>
             </div>
           </div>
         </div>
 
-        <!-- Section 13: Recommended Physical Activities -->
-        <div class="m-section" id="secExercises">
-          <div class="m-section-heading"><i data-lucide="dumbbell"></i> 11. Recommended Physical Activities</div>
-          <ul class="m-bullets" id="mExercisesList"></ul>
+        <!-- Tab 4: Exercise & Habits -->
+        <div class="d-tab-panel" id="tab-habits">
+          <div class="simple-text-block">
+            <h4>🏃 അനുയോജ്യമായ വ്യായാമങ്ങൾ (Recommended Exercises):</h4>
+            <ul class="simple-check-list" id="mExercisesList"></ul>
+          </div>
+          <div class="simple-text-block">
+            <h4>✨ ദിനചര്യ മാറ്റങ്ങൾ (Daily Lifestyle Habits):</h4>
+            <ul class="simple-check-list" id="mLifestyleList"></ul>
+          </div>
         </div>
 
-        <!-- Section 14: Daily Lifestyle Changes -->
-        <div class="m-section" id="secLifestyle">
-          <div class="m-section-heading"><i data-lucide="clock"></i> 12. Daily Lifestyle Changes</div>
-          <ul class="m-bullets" id="mLifestyleList"></ul>
+        <!-- Tab 5: Treatment & Solutions -->
+        <div class="d-tab-panel" id="tab-treatment">
+          <div class="simple-text-block">
+            <h4>💊 ലഭ്യമായ ചികിത്സകളും പരിഹാരങ്ങളും (Treatments & Solutions):</h4>
+            <ul class="simple-check-list" id="mTreatmentsList"></ul>
+          </div>
+          <div class="simple-text-block">
+            <h4>🛡️ രോഗപ്രതിരോധ മാർഗ്ഗങ്ങൾ (Prevention):</h4>
+            <p id="mPreventionText"></p>
+          </div>
+          <div class="simple-text-block" id="mFaqsContainer">
+            <!-- FAQs -->
+          </div>
         </div>
 
-        <!-- Section 15: When to Consult a Doctor -->
-        <div class="m-section" id="secConsult">
-          <div class="m-section-heading"><i data-lucide="phone"></i> 13. When to Consult a Doctor</div>
-          <div class="consult-box" id="mWhenToConsult"></div>
-        </div>
-
-        <!-- Section 16: Frequently Asked Questions -->
-        <div class="m-section" id="secFAQs">
-          <div class="m-section-heading"><i data-lucide="help-circle"></i> 14. Frequently Asked Questions</div>
-          <div class="faqs-accordion" id="mFAQsContainer"></div>
-        </div>
-
-        <!-- Section 17: Trusted Medical References -->
-        <div class="m-section" id="secReferences">
-          <div class="m-section-heading"><i data-lucide="file-text"></i> 15. Trusted Medical References</div>
-          <ul class="m-references" id="mReferencesList"></ul>
+        <!-- Tab 6: Doctor & Red Flags -->
+        <div class="d-tab-panel" id="tab-doctor">
+          <div class="doctor-advice-box" id="mWhenToConsult">
+            ഡോക്ടറെ എപ്പോൾ കാണണം എന്ന വിവരണം.
+          </div>
+          <div class="references-block">
+            <h5>അംഗീകൃത മെഡിക്കൽ റഫറൻസുകൾ (Trusted References):</h5>
+            <ul id="mReferencesList"></ul>
+          </div>
         </div>
 
       </div>
 
-      <!-- Modal Footer -->
-      <div class="modal-footer">
-        <span class="modal-foot-notice">Healthcare For You – Educational Clinical Guide</span>
-        <button class="btn btn-secondary" id="btnModalCloseBottom">Close Guide</button>
+      <!-- Modal Bottom Bar -->
+      <div class="d-modal-footer">
+        <span class="d-foot-msg">HEALTHCARE FOR YOU – ലളിതമായ ആരോഗ്യ സഹായി</span>
+        <button class="btn-close-modal-bottom" id="btnModalCloseBottom">അടയ്ക്കുക (Close)</button>
       </div>
 
     </div>
   </div>
 
-  <!-- ================= ARTICLE FULL-READER MODAL ================= -->
-  <div class="article-modal-overlay" id="articleModalOverlay">
-    <div class="article-modal-content">
-      <div class="article-modal-header">
-        <span class="art-cat-badge" id="artModalCategory">Category</span>
-        <h2 id="artModalTitle">Article Title</h2>
-        <div class="art-meta-line" id="artModalMeta">By Dr. Author | 7 min read</div>
-        <button class="btn-close-modal" id="btnCloseArticleModal"><i data-lucide="x"></i></button>
+  <!-- Simple Clean Footer -->
+  <footer class="simple-footer">
+    <div class="container footer-content-flex">
+      <div class="footer-left">
+        <div class="footer-brand">🌿 HEALTHCARE FOR YOU</div>
+        <p id="txtFooterDesc">എല്ലാവർക്കും മനസ്സിലാകുന്ന ലളിതമായ ആരോഗ്യ വിവരങ്ങളും രോഗപ്രതിരോധ മാർഗ്ഗങ്ങളും.</p>
+        <span class="foot-copy">© 2026 HEALTHCARE FOR YOU. All rights reserved. Referenced from WHO, CDC, NHS.</span>
       </div>
-      <div class="article-modal-body" id="artModalBody">
-        <!-- Rendered markdown/HTML -->
-      </div>
-      <div class="article-modal-footer">
-        <button class="btn btn-secondary" id="btnCloseArticleBottom">Close Article</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Global Footer -->
-  <footer class="main-footer">
-    <div class="container footer-container">
-      <div class="footer-col brand-col">
-        <div class="footer-logo">
-          <div class="logo-symbol small">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5v14"/><path d="M5 12h14"/></svg>
-          </div>
-          <span class="footer-brand-name">HEALTHCARE FOR YOU</span>
-        </div>
-        <p class="footer-desc" id="txtFooterAbout">
-          An authoritative digital healthcare education platform dedicated to chronic disease prevention, clinical literacy, and healthy lifestyle choices.
-        </p>
-        <div class="footer-social-badges">
-          <span class="trust-badge"><i data-lucide="shield-check"></i> Non-Profit Educational Model</span>
-          <span class="trust-badge"><i data-lucide="award"></i> Medically Referenced</span>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-heading">Main Pages</h4>
-        <ul class="footer-nav-list">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#diseases">All Diseases (A-Z)</a></li>
-          <li><a href="#lifestyle">Lifestyle Diseases</a></li>
-          <li><a href="#prevention">Prevention Centre</a></li>
-          <li><a href="#nutrition">Healthy Food & Nutrition</a></li>
-          <li><a href="#fitness">Exercise & Fitness</a></li>
-          <li><a href="#mental-health">Mental Health</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-heading">Clinical Tools & Info</h4>
-        <ul class="footer-nav-list">
-          <li><a href="#symptom-checker">Symptoms Checker</a></li>
-          <li><a href="#risk-assessment">Health Risk Calculators</a></li>
-          <li><a href="#articles">Articles & Blogs</a></li>
-          <li><a href="#about">About Our Mission</a></li>
-          <li><a href="#contact">Contact & Editorial Board</a></li>
-          <li><a href="#disclaimer">Medical Disclaimer</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4 class="footer-heading">Emergency Protocols</h4>
-        <p class="footer-emergency-text">
-          If you experience crushing chest pain, sudden paralysis, or severe respiratory distress, call emergency medical services immediately:
-        </p>
-        <div class="emergency-pills-row">
-          <span class="em-pill">USA/Canada: 911</span>
-          <span class="em-pill">Europe/India: 112</span>
-          <span class="em-pill">UK: 999</span>
-        </div>
-        <p class="footer-note">Do not delay medical care for online advice.</p>
-      </div>
-    </div>
-
-    <div class="footer-bottom-bar">
-      <div class="container footer-bottom-container">
-        <p id="txtFooterCopyright">© 2026 HEALTHCARE FOR YOU. All rights reserved. Medically referenced from WHO, CDC, NHS, and Mayo Clinic guidelines.</p>
-        <div class="footer-bottom-links">
-          <a href="#disclaimer">Terms of Educational Use</a>
-          <a href="#disclaimer">Privacy Policy</a>
-          <a href="#contact">Editorial Ethics</a>
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#home">ഹോം</a>
+          <a href="#diseases">രോഗങ്ങൾ</a>
+          <a href="#nutrition">ഭക്ഷണം</a>
+          <a href="#prevention">പ്രതിരോധം</a>
+          <a href="#tools">കാൽക്കുലേറ്ററുകൾ</a>
+          <a href="#help">സഹായം</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- Compiled Medical Data Script -->
-  <script src="data.js?v=3"></script>
+  <script src="data.js?v=4"></script>
 
-  <!-- Main Application Logic & Router -->
-  <script src="script.js?v=3"></script>
+  <!-- Application Logic & Simplified Controller -->
+  <script src="script.js?v=4"></script>
 
 </body>
 </html>

@@ -68,3 +68,4 @@ if (typeof window !== "undefined") {
 const outputPath = path.join(__dirname, '..', 'data.js');
 fs.writeFileSync(outputPath, fileContent, 'utf8');
 console.log(`Successfully generated ${outputPath} (${(fs.statSync(outputPath).size / 1024).toFixed(1)} KB)`);
+
