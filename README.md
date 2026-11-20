@@ -1,92 +1,97 @@
-# ആരോഗ്യം (Aarogyam) - മലയാളം ആരോഗ്യ പരിപാലന വെബ്‌സൈറ്റ്
+# HEALTHCARE FOR YOU – Complete Health & Disease Prevention Platform
 
-ലളിതമായ ആരോഗ്യ വിവരങ്ങൾ (പ്രായം, ഭാരം, പ്രമേഹം, യൂറിക് ആസിഡ്, ഇടുപ്പ് / സന്ധി വേദന തുടങ്ങിയവ) നൽകി വ്യക്തിഗത മലയാളം ഡയറ്റ് നിർദ്ദേശങ്ങൾ, വാട്ടർ റിമൈൻഡർ, സുരക്ഷിതമായ വ്യായാമങ്ങൾ, പ്രതിമാസ സബ്സ്ക്രിപ്ഷൻ, ഡോക്ടർ കൺസൾട്ടേഷൻ എന്നിവ നൽകുന്ന വെബ്‌സൈറ്റ്.
-
----
-
-## 🌟 പ്രധാന സവിശേഷതകൾ (Key Features)
-
-1. **ആരോഗ്യ വിവര ശേഖരണം (Health Assessment Form)**:
-   - പ്രായം (Age), ശരീരഭാരം (Weight in kg), ഉയരം (Height in cm), ലിംഗം (Gender).
-   - അസുഖങ്ങൾ തിരഞ്ഞെടുക്കാനുള്ള സൗകര്യം (From Bone Fracture to Fever & Chronic Diseases):
-     - 🦴 എല്ല് പൊട്ടൽ / ഒടിവ് (Bone Fracture & Healing)
-     - 🌡️ പനി & വൈറൽ അണുബാധകൾ (Fever & Infection)
-     - 🧘 നടുവേദന & ഡിസ്ക് പ്രശ്നം (Back Pain & Disc Bulge)
-     - 🫁 ആസ്ത്മ & അലർജി / ചുമ (Asthma, Cough & Allergy)
-     - ⚡ മൈഗ്രെയ്ൻ & കടുത്ത തലവേദന (Migraine & Headache)
-     - 🩸 വിളർച്ച / രക്തക്കുറവ് (Anemia / Low Hb)
-     - 🌾 മലബന്ധം & പൈൽസ് (Constipation & Piles)
-     - 🩸 പ്രമേഹം (Diabetes / Sugar)
-     - 🧪 യൂറിക് ആസിഡ് (Uric Acid / Gout)
-     - 🦵 ഇടുപ്പ് / സന്ധി വേദന (Hip & Joint Pain / Arthritis)
-     - 💓 ഉയർന്ന രക്തസമ്മർദ്ദം (High Blood Pressure)
-     - 🫀 കൊളസ്ട്രോൾ (Cholesterol)
-     - 🦋 തൈറോയ്ഡ് (Thyroid Problems)
-     - 🩺 ഫാറ്റി ലിവർ (Fatty Liver Disease)
-     - 🫧 ഗ്യാസ്ട്രബിൾ & അസിഡിറ്റി (Acidity / GERD)
-     - 🪨 കിഡ്നി സ്റ്റോൺ (Kidney Stones)
-     - 🌸 പി.സി.ഒ.ഡി / പി.സി.ഒ.എസ് (PCOD / PCOS)
-     - 🌿 സാധാരണ ആരോഗ്യം (General Fitness)
-   - 🔍 **അസുഖങ്ങൾ വേഗത്തിൽ കണ്ടെത്താനുള്ള ലൈവ് സേർച്ച് ബാർ**.
-   - ശാരീരിക അധ്വാന നില (Activity Level: കുറഞ്ഞത്, ഇടത്തരം, കൂടുതൽ).
-
-2. **വ്യക്തിഗത ആരോഗ്യ ഡാഷ്‌ബോർഡ് (Personalized Dashboard)**:
-   - ബി.എം.ഐ (BMI) കണക്കാക്കലും കളർ-കോഡഡ് പ്രോഗ്രസ് ബാറും.
-   - ഇന്നത്തെ ആരോഗ്യ ശീലങ്ങൾക്കായുള്ള ഡെയ്‌ലി ചെക്ക്‌ലിസ്റ്റും പ്രോഗ്രസ് സ്കോറും.
-   - വാട്ടർ ഇൻടേക്ക് ചുരുക്കം.
-
-3. **മലയാളം ഡയറ്റ് നിർദ്ദേശങ്ങൾ (Condition-Specific Diet Guide)**:
-   - ✅ **കഴിക്കാൻ അനുയോജ്യമായവ (Safe Foods)**:
-     - പ്രമേഹത്തിന്: തവിടുള്ള കുത്തരി, ചെറുപയർ, കടല, കയ്പക്ക (പാവയ്ക്ക), മുരിങ്ങയില, ഉലുവ വെള്ളം.
-     - യൂറിക് ആസിഡിന്: ധാരാളം ശുദ്ധജലം, നാരങ്ങാവെള്ളം (വിറ്റാമിൻ സി), ആപ്പിൾ, പപ്പായ, വെള്ളരിക്ക, കാരറ്റ്, കൊഴുപ്പ് കുറഞ്ഞ മോര്.
-     - ഇടുപ്പ് / സന്ധി വേദനയ്ക്ക്: മഞ്ഞൾ ചേർത്ത പാൽ, മുരിങ്ങയില, എള്ള്, ഇഞ്ചി, വെളുത്തുള്ളി, ഒമേഗ-3 നട്സുകൾ.
-   - ⚠️ **ഒഴിവാക്കേണ്ട ഭക്ഷണങ്ങൾ (Foods to Avoid)**:
-     - പഞ്ചസാര, മൈദ പലഹാരങ്ങൾ, ചുവന്ന മാംസം (ബീഫ്, മട്ടൺ), ഉയർന്ന പ്യൂരിൻ അടങ്ങിയ മീനുകൾ (മത്തി, അയല), അച്ചാറുകൾ, തണുത്ത ആഹാരങ്ങൾ മുതലായവ.
-   - 🕒 **മാതൃകാ ഭക്ഷണക്രമം (Sample Meal Routine)**: പ്രഭാതഭക്ഷണം, ഉച്ചഭക്ഷണം, വൈകുന്നേരത്തെ ചായ, അത്താഴം.
-
-4. **സമഗ്ര പരിഹാരങ്ങളും പ്രകൃതിദത്ത പരിചരണവും (Actionable Solutions & Care Tips)**:
-   - തിരഞ്ഞെടുത്ത ഓരോ അസുഖത്തിനും (എല്ല് പൊട്ടൽ, പനി, നടുവേദന, മൈഗ്രെയ്ൻ, പ്രമേഹം തുടങ്ങിയവ) വേഗത്തിൽ ആശ്വാസം ലഭിക്കാനുള്ള പ്രകൃതിദത്ത പരിഹാരങ്ങൾ.
-   - വീട്ടിൽ ചെയ്യാവുന്ന പരിചരണങ്ങൾ (Home Remedies) ഘട്ടംഘട്ടമായി.
-   - 🚨 എപ്പോൾ അടിയന്തരമായി ഡോക്ടറെ കാണണം എന്ന മുന്നറിയിപ്പുകൾ.
-
-5. **വാട്ടർ ട്രാക്കറും ഓർമ്മപ്പെടുത്തലും (Water Tracker & Reminder)**:
-   - ശരീരഭാരത്തിനനുസരിച്ച് ആവശ്യമുള്ള വെള്ളത്തിന്റെ അളവ് (ലിറ്ററിലും ഗ്ലാസ്സിലും) സ്വയം കണക്കാക്കുന്നു.
-   - ഇന്ററാക്ടീവ് വാട്ടർ ബോട്ടിൽ അനിമേഷൻ (`+1 ഗ്ലാസ്സ് കുടിച്ചു`).
-   - സൗണ്ട് അലാറം (Web Audio API Synthesizer Chime) കൂടാതെ സമയ ഇടവേള ക്രമീകരിക്കൽ (30, 45, 60 മിനിറ്റ്).
-
-6. **സുരക്ഷിതമായ വ്യായാമങ്ങൾ & വിശ്രമ നിർദ്ദേശങ്ങൾ (Safe Exercise & Rest Protocols)**:
-   - ഒടിവുകൾക്കും പനിക്കും അനുയോജ്യമായ പൂർണ്ണ വിശ്രമ നിർദ്ദേശങ്ങൾ (Bed Rest & Elevation).
-   - ഇടുപ്പ്/സന്ധി/നടുവേദനയുള്ളവർക്കായി കസേര വ്യായാമങ്ങൾ, നിരപ്പായ തറയിലൂടെയുള്ള സാവധാന നടത്തം.
-   - പ്രത്യേക സുരക്ഷാ മുന്നറിയിപ്പുകൾ.
-
-7. **പ്രതിമാസ വരിസംഖ്യ (Monthly Subscription Payment)**:
-   - സൗജന്യ പ്ലാൻ (Free Plan)
-   - പ്രതിമാസ കെയർ പ്ലാൻ (₹199 / മാസം)
-   - ഡോക്ടർ VIP പ്ലാൻ (₹499 / മാസം)
-   - ഇന്ററാക്ടീവ് UPI QR കോഡും കാർഡ് പേയ്‌മെന്റ് മോഡലും തൽക്ഷണ സബ്സ്ക്രിപ്ഷൻ ആക്റ്റിവേഷനും.
-
-8. **ഡോക്ടർ / ഹെൽത്ത് കോച്ച് ബന്ധപ്പെടൽ (Doctor & Coach Contact)**:
-   - ഉപയോക്താവിന്റെ വിവരങ്ങൾ തനിയെ ടൈപ്പ് ചെയ്യുന്ന വാട്സാപ്പ് ചാറ്റ് ബട്ടൺ (WhatsApp One-Click Direct Chat).
-   - നേരിട്ടുള്ള ഫോൺ കോൾ ബട്ടൺ (+91 98765 43210).
-   - ഓൺലൈൻ കൺസൾട്ടേഷൻ ബുക്കിംഗ് ഫോം.
-
-8. **പ്രിന്റ് / സേവ് ഓപ്ഷൻ**:
-   - വീട്ടിലെ ഫ്രിഡ്ജിലോ ഭിത്തിയിലോ ഒട്ടിച്ചുവെക്കാൻ അനുയോജ്യമായ രീതിയിൽ വൃത്തിയുള്ള ഡയറ്റ് ചാർട്ട് ഒറ്റ ക്ലിക്കിൽ പ്രിന്റ് ചെയ്യാം.
+> **നിങ്ങളുടെ ആരോഗ്യം, ലളിതമായി മനസ്സിലാക്കാം.**  
+> A modern, accessible, evidence-based healthcare education and disease prevention platform.
 
 ---
 
-## 🚀 എങ്ങനെ തുറക്കാം? (How to Run / Open)
+## 🌟 Overview
 
-ഈ വെബ്‌സൈറ്റ് പൂർണ്ണമായും സ്റ്റാൻഡലോൺ (HTML5, CSS3, JavaScript) ആയതിനാൽ പ്രത്യേക ഇൻസ്റ്റലേഷനുകൾ ആവശ്യമില്ല:
+**HEALTHCARE FOR YOU** is designed to educate everyday people about acute and chronic health conditions in simple language, with practical, daily lifestyle habits, nutrition guidelines, and proven medical solutions.
 
-### രീതി 1: നേരിട്ട് ബ്രൗസറിൽ തുറക്കുക
-1. നിങ്ങളുടെ കമ്പ്യൂട്ടറിലെ `c:\Users\AJ\Desktop\health` ഫോൾഡർ തുറക്കുക.
-2. `index.html` ഫയലിൽ ഡബിൾ ക്ലിക്ക് ചെയ്യുക (Google Chrome, Microsoft Edge, Firefox എന്നിവയിൽ തുറക്കാം).
+- **Primary Languages:** Malayalam (Default), English, Hindi, Arabic (Full RTL layout).
+- **Core Focus:** Disease awareness, early symptom identification, diet management (What to eat vs What to avoid), physical activity, and prevention strategies.
 
-### രീതി 2: ലോക്കൽ സെർവർ വഴി (Optional)
-ടെർമിനലിൽ താഴെ പറയുന്ന കമാൻഡ് നൽകാം:
-```bash
-python -m http.server 3000
-```
-ശേഷം ബ്രൗസറിൽ `http://localhost:3000` സന്ദർശിക്കുക.
+---
 
+## 🚀 Key Features
+
+### 1. 🩺 60+ A–Z Disease Library & Solutions
+Covers conditions across 9 major medical categories:
+- **Lifestyle Diseases:** Type 1 & 2 Diabetes, Hypertension, Heart Disease, Coronary Artery Disease (CAD), Obesity, High Cholesterol, Stroke, Fatty Liver, Chronic Kidney Disease, Metabolic Syndrome.
+- **Respiratory Conditions:** Asthma, COPD, Pneumonia, Tuberculosis, Chronic Bronchitis, Lung Cancer.
+- **Digestive Diseases:** Gastritis, Acid Reflux (GERD), IBS, Peptic Ulcers, Fatty Liver, Gallstones, Celiac Disease.
+- **Bone, Joint & Trauma:** Bone Fractures, Osteoarthritis, Rheumatoid Arthritis, Gout (Uric Acid), Osteoporosis, Chronic Back Pain / Slipped Disc.
+- **Neurological & Mental Health:** Migraine, Epilepsy, Alzheimer's, Parkinson's, Depression, Anxiety, Insomnia.
+- **Infectious Diseases:** Fever & Viral Infections, Dengue, Malaria, COVID-19, Typhoid, Hepatitis.
+- **Cancer Awareness & Other Conditions:** Breast, Lung, Prostate, Cervical, Skin cancers; Thyroid disorders, PCOS, Anemia, Vitamin D & B12 deficiencies.
+
+### 2. 📖 Streamlined Tabbed Disease Modal
+Every disease features an interactive modal with 6 focused sections:
+1. **Overview:** What is it and main causes in layman's terms.
+2. **Symptoms & Warning Signs:** Common symptoms + 🚨 Emergency Red Flags.
+3. **Diet Plan (Eat vs Avoid):** Clean visual split between **🟢 What to Eat** and **🔴 Foods to Avoid**.
+4. **Exercise & Habits:** Tailored physical activities and daily routines.
+5. **Solutions & Treatments:** Clinical treatments, home remedies, and FAQs.
+6. **Doctor Consultation:** Clear advice on when to visit a doctor, referenced from WHO, CDC, and NHS.
+
+### 3. 🥗 Healthy Food & Nutrition Center
+- Condition-specific food guides (Diabetes, Hypertension, Kidney health, Liver health, Heart disease).
+- Complete meal templates (Healthy Breakfast, Lunch, and Dinner) with portion guidelines, calories, and macronutrient breakdowns.
+
+### 4. 🛡️ Disease Prevention Center
+10 actionable, evidence-based prevention guides for:
+- Type 2 Diabetes
+- High Blood Pressure
+- Cardiovascular Disease & CAD
+- Obesity & Visceral Fat
+- Bad LDL Cholesterol
+- Kidney Health & Hydration
+- Liver Health & Detoxification
+- Mental Health & Stress Resilience
+- Cancer Risk Reduction
+- Natural Immune System Support
+
+### 5. ⚖️ Interactive Health Calculators
+- **BMI Calculator:** Real-time score, color-coded health status (Underweight, Healthy, Overweight, Obese), and ideal weight range for height.
+- **Water Intake Estimator:** Computes daily hydration requirements (in liters and glasses) adjusted for body weight and physical activity levels.
+- **Blood Pressure Checker:** Evaluates Systolic/Diastolic readings based on AHA/WHO criteria (Normal, Elevated, Stage 1, Stage 2, Hypertensive Crisis).
+- **Diabetes Risk Assessment:** 4-question lifestyle screener identifying low, moderate, or high risk with preventive lifestyle advice.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend:** Vanilla HTML5, CSS3 (Modern Medical Technology aesthetic), JavaScript (ES6+ modular controller).
+- **Icons & Typography:** Lucide Icons, Plus Jakarta Sans, Noto Sans Malayalam, Noto Sans Devanagari, Cairo.
+- **Backend (Optional Server):** Node.js & Express (`server.js`).
+- **Data Engine:** Pre-compiled standalone medical database (`data.js`).
+
+---
+
+## 💻 How to Run Locally
+
+### Option 1: Direct in Browser
+Open `index.html` directly in any web browser (Chrome, Edge, Firefox, Safari).
+
+### Option 2: Using the Node.js Server
+1. Ensure Node.js is installed.
+2. Open terminal in the project directory:
+   ```bash
+   node server.js
+   ```
+3. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## ⚠️ Medical Disclaimer
+
+This website provides educational and disease-prevention information. It is not a substitute for direct professional medical diagnosis, advice, or treatment. Users experiencing severe symptoms (e.g. chest pain, sudden weakness, severe breathing difficulty) should contact emergency services (**112** / **911**) immediately.
+
+---
+
+## 📄 License
+Referenced from public guidelines of WHO, CDC, and NHS for health educational purposes.
